@@ -1,39 +1,97 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# **The Angel's Share**
 
-Welcome PatrickCoakley23,
+As part of my Milestone 4 project with [Code Institute]( https://codeinstitute.net/), I was challenged with using the [Django Framework]( https://www.djangoproject.com/start/overview/) to build a full stack website which is based around business logic used to control a centrally-owned dataset. 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+I decided to build a whiskey subscription service called the **Angel's Share**. The name for the brand was chosen after the Angel’s take their cut from every barrel of distilled spirits. In the simplest of terms, the Angel’s Share is the amount of distilled spirits lost to evaporation from the barrel or cask into the air as the whiskey ages.  
 
-## Gitpod Reminders
+The Angel’s Share website, provides three whiskey club subscriptions to choose from: Irish Whiskey, Scottish Whiskey and American Bourbon. Club members can choose between a 3 month, 6 month or a 12 month subscription, with a different bottle of whiskey being delivered each month. 
+The various types of whiskey’s selected by the Angel’s Share, range from classic whiskeys everybody is familiar with, to craft specials that are provided exclusively to the Angel’s Share from the distiller. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+The Angel’s Share is perfect for people who have a keen interest in whiskey, or those who want to get started in building a whiskey collection. The Angel’s Share is also a perfect gift option.
 
-`python3 -m http.server`
+## **User Experience (UX)**
 
-A blue button should appear to click: *Make Public*,
+-   ### User Stories
 
-Another blue button should appear to click: *Open Browser*.
+    - As a Shopper 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+        - As a user I want to be able to view all the product’s/service’s available to purchase from the Angel’s Share. 
+            - Choose Your Poison page – users have the option to select between the three whiskey clubs (Irish, Scottish and Bourbon Whiskey)
 
-A blue button should appear to click: *Make Public*,
+        - As a User I want to get more information on each whiskey club/product when I click on the relevant club. 
+            - Reason for Whiskey selected page with more detailed information like description, rating , taste notes etc. 
 
-Another blue button should appear to click: *Open Browser*.
+        - As a shopper I want to see the different price options for the various clubs. 
+            - ‘Choose your hit’ section users can see the price of getting the Angel’s Drop package for 3/6 and 12 month subscriptions. 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
+        - As a user I want to be able to see an ‘About Page’, so I can understand the type of company the Angel’s Breath is. 
+            - Reason for About page.
 
-## Updates Since The Instructional Video
+    - Registration 
+        
+        - As a user who wants to subscribe to one of the Angel’s Drops whiskey clubs, I would like to be able to register an account easily so I can checkout quicker and receive special offers. 
+            - Reason for login/registration. 
 
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
+        - As a registered user I want to be able to login and logout quickly. 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+        - As a one-time user I want to be able to make a once off purchase without signing up. 
+            - If purchasing the whiskey subscription as a gift, user’s don’t need to sign up. 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+    - Purchasing & Checkout 
+        
+        - As a user I want to be able to view my shopping bag once I have selected a product, so I can evaluate the details of my purchase and the total cost. 
+            - Reason for the shopping bag. 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+        - As a user I want to easily enter my payment and shipping information and feel my transaction is safe and secure.
+            - Users are brought to the secure checkout and payment is handled by stripe to guarantee a secure transaction. 
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+    - Admin and Store Management 
+        - As a website developer I want to be able to use the basic CRUD functionality to be able to add, edit and delete products/services on the website. 
 
---------
 
-Happy coding!
+-   ### **WIREFRAMES**
+
+After reading the project brief i formulated a idea and jotted down notes and rough sketches on pen and paper. These ideas evolved into creating user stories which helped me formulate a plan to draw up some wireframes.
+I used [Balsamic](https://balsamiq.com/) to build the wireframes. I created mockups for desktop, tablet and mobile viewports, so i could have an idea of what my website would look like, and i could follow a plan to avoid scope creep.
+
+<details>
+<summary>Desktop Wireframes <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="wireframes/images/wireframes_landing_page.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="wireframes/images/wireframes_how_it_works.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="wireframes/images/wireframes_choose_your_poison.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="wireframes/images/wireframes_choose_your_hit.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="wireframes/images/wireframes_gift.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="wireframes/images/wireframes_about.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="wireframes/images/wireframes_ordersummary.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="wireframes/images/wireframes_login_register.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+<details>
+<summary>Tablet Wireframes <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="wireframes/images/wireframes_ipad.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+<details>
+<summary>Phone Wireframes <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="wireframes/images/wireframes_phone.png" style="max-width:100%;"></a>
+</p>
+</details>
