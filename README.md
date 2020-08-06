@@ -66,6 +66,9 @@ I used [Balsamic](https://balsamiq.com/) to build the wireframes. I created mock
   <img height="350" src="wireframes/images/wireframes_choose_your_poison.png" style="max-width:100%;"></a>
 </p>
 <p align="center">
+  <img height="350" src="wireframes/images/wireframes_selected.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
   <img height="350" src="wireframes/images/wireframes_choose_your_hit.png" style="max-width:100%;"></a>
 </p>
 <p align="center">
@@ -87,11 +90,17 @@ I used [Balsamic](https://balsamiq.com/) to build the wireframes. I created mock
 <p align="center">
   <img height="350" src="wireframes/images/wireframes_ipad.png" style="max-width:100%;"></a>
 </p>
+<p align="center">
+  <img height="350" src="wireframes/images/wireframes_selected_ipad.png" style="max-width:100%;"></a>
+</p>
 </details>
 
 <details>
 <summary>Phone Wireframes <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
   <img height="350" src="wireframes/images/wireframes_phone.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="wireframes/images/wireframes_selected_phone.png" style="max-width:100%;"></a>
 </p>
 </details>
