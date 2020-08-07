@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Lato', sans-serif;
+    color: white;
 }
 
 h1, h2, h3, h4, h5 {
@@ -18,3 +19,30 @@ header {
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
+
+.navbar-nav .nav-link:hover {
+    color: #21853f;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* HOMEPAGE */
+ .hero-image-container {
+    background: url('/media/hero_image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+ }
+
+ /* BUTTONS */
+
+ .btn-orange {
+    color: #000000;
+    background-color: #ff9d37;
+    border-color: #ff9d37;
+ }
+
+ .btn-orange:hover {
+     color: #ff9d37;
+     background-color: #fff;
+ }
