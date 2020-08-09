@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import whiskey_clubs
+from .models import whiskey_club
 
 # Register your models here.
-admin.site.register(whiskey_clubs)
+admin.site.register(whiskey_club)
