@@ -5,29 +5,30 @@
 
 
 {% block content %}
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col text-center mt-5">
-            <h2>Choose Your Poison</h2>
-            <hr class="w-50 mb-5">
+<div class="overlay"></div>
+    <div class="container-fluid my-5">
+        <div class="row">  
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2 d-flex">
+                <img src="../media/{{ club_selected.image }}" class="club-selected-image" alt="image for whiskey club">
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 text-white"> 
+                <h1>{{ club_selected.name}} </h1>
+                <p>{{ club_selected.description|linebreaksbr }}</p>
             </div>
         </div>
-    
-        <div class="row">
-            <div class="clubs-container col-10 offset-1">
-                <!--RECIPE CARD DECKS-->
-                <div class="row">
-              
-                    <div>
-                    <h1>{{ club_selected.name}} </h1>
-                    <p>{{ club_selected.description }}</p>
-                    </div>
-                  
-                </div>
-              
-            </div>
-        </div>
-
-
     </div>
+        <div class="container-fluid container-charcoal mt-5">
+        <div class="row py-5">  
+           
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2 text-white"> 
+                <h2 class="text-center">{{ club_selected.name}} Tasting Notes </h2>
+                <p>{{ club_selected.tasting_notes|linebreaksbr }}</p>
+            </div>
+             <div class="col-12 col-md-6 col-lg-4 d-flex">
+                <img src="../media/whiskey_taste.jpg" class="club-selected-image" alt="image for whiskey club">
+            </div>
+        </div>
+    </div>
+    
+
 {% endblock %}

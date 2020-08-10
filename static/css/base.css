@@ -54,3 +54,24 @@ header {
     align-self: center;
     }  
 }
+
+/* Club Selected */
+
+.club-selected-image {
+    width: 100%;    
+}
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: black;
+	z-index: -1;
+}
+
+.container-charcoal {
+    background-color: #232323;
+}
+
