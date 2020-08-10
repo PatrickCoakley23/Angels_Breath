@@ -104,3 +104,15 @@ I used [Balsamic](https://balsamiq.com/) to build the wireframes. I created mock
   <img height="350" src="wireframes/images/wireframes_selected_phone.png" style="max-width:100%;"></a>
 </p>
 </details>
+
+## Credits
+
+### Media 
+- The **Angel's Drop** logo was created using [Tailor Brands]( https://www.tailorbrands.com/).
+- [Font Awesome]( https://fontawesome.com/start) was the source of all the icons. 
+- All of the images were sourced from these [whiskey images]( https://www.shutterstock.com/search/whiskey) from [Shutterstock]( https://www.shutterstock.com/).
+
+### Content 
+- Some of the content about Irish Whiskey was inspired or copied directly from this article post titled [An introduction to Irish Whiskey](https://www.primermagazine.com/2013/live/an-introduction-to-irish-whiskey#:~:text=Smooth%20and%20sweet%2C%20the%20nose,over%20heavily%20into%20the%20taste.&text=The%20whiskey%20finishes%20long%2C%20warm%2C%20and%20spicy.) from [Primer Magazine](https://www.primermagazine.com/)
+- The content about American Whiskey was inspired or copied directly from this article titled [American Whiskey]( https://www.whisky.com/information/knowledge/production/types-of-whiskies/american-whiskey.html) from [Whisky.com]( https://www.whisky.com/)
+- The content about Scottish Whisky was inspired or copied directly from this post titled [The Scotch Whisky Guide]( https://www.gentlemansgazette.com/the-scotch-whisky-guide/) from the [Gentleman's Gazette]( https://www.gentlemansgazette.com/).
