@@ -38,7 +38,7 @@
     <header>
         <nav class="navbar navbar-expand-lg w-100">
             <!-- BRAND AND LOGO-->
-            <a class="navbar-brand uppercase" href=""><img src="../media/angels_drop_navbrand.png" alt="Angel's Share Logo"  width="200" height="75" /></a>
+            <a class="navbar-brand uppercase" href="{% url 'home' %}"><img src="../media/angels_drop_navbrand.png" alt="Angel's Share Logo"  width="200" height="75" /></a>
             <!-- HAMBURGER MENU FOR SMALLER SCREEN WIDTHS-->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler1" aria-controls="navbarToggler1" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -47,7 +47,7 @@
             <div class="collapse navbar-collapse" id="navbarToggler1">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-right mr-2">
-                    <a class="nav-link" href="#hero-section">Clubs</a>
+                    <a class="nav-link" href="{% url 'clubs' %}">Clubs</a>
                     </li>
                     <li class="nav-right mr-2">
                     <a class="nav-link" href="#why-visit-cork-container">How it Works</a>

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import whiskey_club
 
 
@@ -15,3 +15,14 @@ def whiskey_clubs(request):
     }
 
     return render(request, 'clubs/whiskey_clubs.html', context)
+
+def club_selected(request, club_id):
+    """ a view to return a more detailed look at the whiskey club selected"""
+    
+    club_selected = get_object_or_404(whiskey_club, pk=club_id)
+
+    context = {
+        'club_selected': club_selected,
+    }
+
+    return render(request, 'clubs/whiskey_selected.html', context)

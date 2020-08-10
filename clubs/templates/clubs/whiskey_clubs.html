@@ -25,8 +25,9 @@
                                 <h5 class="card-title text-center ">{{club.name }}</h5>
                                 <hr>
                                 <p class="card-text">{{ club.comment }}</p>
-                                <a href="" class="btn btn-outline-dark mt-auto" role="button" id="btn-card">Select</a>   
+                                <a href="{% url 'club_selected' club.id %}" class="btn btn-outline-dark mt-auto" role="button" id="btn-card">Select</a>   
                             </div>
+
                         </div>
                     </div>
                     {% endfor %}

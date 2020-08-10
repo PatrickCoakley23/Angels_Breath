@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-5">
+            <h2>Choose Your Poison</h2>
+            <hr class="w-50 mb-5">
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="clubs-container col-10 offset-1">
+                <!--RECIPE CARD DECKS-->
+                <div class="row">
+              
+                    <div>
+                    <h1>{{ club_selected.name}} </h1>
+                    <p>{{ club_selected.description }}</p>
+                    </div>
+                  
+                </div>
+              
+            </div>
+        </div>
+
+
+    </div>
+{% endblock %}
