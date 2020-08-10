@@ -45,3 +45,12 @@ header {
      color: #ff9d37;
      background-color: #fff;
  }
+
+/* Whiskey Club Cards */
+
+@media (min-width: 768px) {
+    .clubs-image {
+    height: 20vw;
+    align-self: center;
+    }  
+}
