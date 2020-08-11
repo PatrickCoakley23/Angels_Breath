@@ -50,11 +50,16 @@
 
                 <div class="cta">
                     <p><strong>{{ club_selected.comment}}</strong></p>
+                    <form class="form" method="POST" action="{% url 'add_to_cart' club_selected.id %}">
+                        {% csrf_token %}
                     <div class="row button-center">
                         <div class="col button-center">
-                            <a href="" class="btn btn-orange rounded-0 text-uppercase">Join Now</a>
+                            <a href="{% url 'add_to_cart' club_selected.id %}" class="btn btn-orange rounded-0 text-uppercase">
+                            <input type="submit" value="join now" data-club_id="{{ club_selected.id }}" >
+                            </a>  
                         </div>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>
