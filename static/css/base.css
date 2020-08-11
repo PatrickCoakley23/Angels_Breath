@@ -24,6 +24,10 @@ header {
     font-family: 'Montserrat', sans-serif;
 }
 
+.navbar-toggler {
+    border: 1px solid gray;
+}
+
 /* HOMEPAGE */
  .hero-image-container {
     background: url('/media/hero_image.jpg') no-repeat center center fixed;
@@ -40,12 +44,17 @@ header {
     background-color: #ff9d37;
     border-color: #ff9d37;
     padding: 10px;
- }
+}
 
  .btn-orange:hover {
      color: #ff9d37;
      background-color: #fff;
- }
+}
+
+.button-center {
+    text-align: center;
+    margin-top: 10px;
+}
 
 /* Whiskey Club Cards */
 
@@ -103,9 +112,4 @@ header {
         overflow: hidden;
         height: 85vh;
     }
-}
-
-.button-center {
-    text-align: center;
-    margin-top: 10px;
 }
