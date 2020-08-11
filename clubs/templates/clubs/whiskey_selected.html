@@ -12,8 +12,13 @@
                 <img src="../media/{{ club_selected.image }}" class="club-selected-image" alt="image for whiskey club">
             </div>
             <div class="col-12 col-md-6 col-lg-4 text-white"> 
-                <h1>{{ club_selected.name}} </h1>
+                <h1 class="text-center">{{ club_selected.name}} </h1>
                 <p>{{ club_selected.description|linebreaksbr }}</p>
+                <div class="row button-center">
+                    <div class="col button-center">
+                        <a href="" class="btn btn-orange rounded-0 text-uppercase">Join Now</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -21,11 +26,36 @@
         <div class="row py-5">  
            
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2 text-white"> 
-                <h2 class="text-center">{{ club_selected.name}} Tasting Notes </h2>
+                <h2 class="text-center mb-3">{{ club_selected.name}} Tasting Notes </h2>
                 <p>{{ club_selected.tasting_notes|linebreaksbr }}</p>
             </div>
              <div class="col-12 col-md-6 col-lg-4 d-flex">
                 <img src="../media/whiskey_taste.jpg" class="club-selected-image" alt="image for whiskey club">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid whiskey-package-container"> 
+        <div class="row whiskey-package-row">
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2 text-white my-auto"> 
+                <h2 class="text-center mb-3">The Whiskey Club Package</h2>
+                <p>Each month, you’ll receive a new bottle of great whiskey that you will savour.</p>
+                <h6>Extra's included in the club package:</h6>
+                <ul>
+                    <li>Flavour profiles and tasting notes for each bottle. </li>
+                    <li>Tutorial on how to recognise different whiskey blends.</li>
+                    <li>Whiskey Production Techniques</li>
+                    <li>Expert evaluations and commentary on bottles.</li>
+                </ul>
+
+                <div class="cta">
+                    <p><strong>{{ club_selected.comment}}</strong></p>
+                    <div class="row button-center">
+                        <div class="col button-center">
+                            <a href="" class="btn btn-orange rounded-0 text-uppercase">Join Now</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

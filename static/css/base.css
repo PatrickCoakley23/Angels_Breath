@@ -39,6 +39,7 @@ header {
     color: #000000;
     background-color: #ff9d37;
     border-color: #ff9d37;
+    padding: 10px;
  }
 
  .btn-orange:hover {
@@ -75,3 +76,36 @@ header {
     background-color: #232323;
 }
 
+@media (min-width: 768px) { 
+.whiskey-package-container {
+    background: url('/media/whiskey-package.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    height:100vh;
+    }
+    .whiskey-package-row {
+        height: 100%;
+    }
+}
+
+@media (max-width: 767.98px){ 
+    
+    .whiskey-package-row {
+        margin-top: 67px;
+        height: 0;
+
+    }
+    .whiskey-package-container {
+        background: url('/media/whiskey-package.jpg') no-repeat center center fixed;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+        height: 85vh;
+    }
+}
+
+.button-center {
+    text-align: center;
+    margin-top: 10px;
+}
