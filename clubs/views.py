@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import whiskey_club
+from .models import Whiskey_club
 
 
 # Create your views here.
@@ -8,7 +8,7 @@ from .models import whiskey_club
 def whiskey_clubs(request):
     """ a view to return the different whiskey clubs users can subscribe to"""
     
-    whiskey_clubs = whiskey_club.objects.all()
+    whiskey_clubs = Whiskey_club.objects.all()
 
     context = {
         'whiskey_clubs': whiskey_clubs,
@@ -19,7 +19,7 @@ def whiskey_clubs(request):
 def club_selected(request, club_id):
     """ a view to return a more detailed look at the whiskey club selected"""
     
-    club_selected = get_object_or_404(whiskey_club, pk=club_id)
+    club_selected = get_object_or_404(Whiskey_club, pk=club_id)
 
     context = {
         'club_selected': club_selected,

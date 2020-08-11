@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class whiskey_club(models.Model):
+class Whiskey_club(models.Model):
     name = models.CharField(max_length=254)					
     comment = models.CharField(max_length=254)	
     description = models.TextField()
