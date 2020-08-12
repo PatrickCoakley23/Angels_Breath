@@ -26,9 +26,20 @@ class Subscription_type(models.Model):
                                 null=True, blank=True)
     whiskey_clubs = models.ManyToManyField(Whiskey_club,
                                            through='Subscriptions')
+    image = models.ImageField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name
 
 
 class Subscriptions(models.Model):
+    
+    class Meta:
+        verbose_name_plural = "Subscriptions"
+
     whiskey_club = models.ForeignKey(Whiskey_club, on_delete=models.CASCADE)
     Subscription_type = models.ForeignKey(Subscription_type,
                                           on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name

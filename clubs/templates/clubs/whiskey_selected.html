@@ -16,9 +16,9 @@
                 <p>{{ club_selected.description|linebreaksbr }}</p>
                 <div class="row button-center">
                     <div class="col button-center">
-                        <a href="" class="btn btn-orange rounded-0 text-uppercase">Join Now</a>
+                        <a href="{% url 'choose_subscription' club_selected.id %}" class="btn btn-orange rounded-0 text-uppercase">Join Now</a>
                     </div>
-                </div>
+                </div> 
             </div>
         </div>
     </div>
