@@ -33,7 +33,7 @@ class Subscription_type(models.Model):
 
 
 class Subscriptions(models.Model):
-    
+
     class Meta:
         verbose_name_plural = "Subscriptions"
 

@@ -32,9 +32,9 @@ def club_selected(request, club_id):
 def choose_subscription(request, club_id):
     """ a view to show the subscription options """
 
-    club_selected = get_object_or_404(Whiskey_club, pk=club_id)
+    club_selected = get_object_or_404(Whiskey_club, pk=club_id) #picks up the specific whiskey selected id
 
-    subscriptions = Subscription_type.objects.all()
+    subscriptions = Subscription_type.objects.all() #this gets all the information like price, subsciption time(3 months/ 6months etc)
 
     context = {
         'club_selected': club_selected,
