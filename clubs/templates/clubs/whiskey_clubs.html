@@ -20,7 +20,7 @@
                  {% for club in whiskey_clubs %}
                     <div class="col-12 col-md-4 recipe-card-col">
                         <div class="card h-100">
-                            <img class="card-img-top card-image-holder clubs-image" src="../media/{{ club.image }}" alt="Card image cap">
+                            <img class="card-img-top card-image-holder clubs-image" src="{{ MEDIA_URL}}{{ club.image }}" alt="Card image cap">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title text-center ">{{club.name }}</h5>
                                 <hr>

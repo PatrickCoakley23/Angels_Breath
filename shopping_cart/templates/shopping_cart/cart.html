@@ -30,7 +30,7 @@
                     {% for item in cart_items %}
                     <tr>
                         <td class="p-3 w-25">
-                            <img class="img-fluid rounded" src="../media/{{ item.whiskey_club.image}}" alt="Image of Whiskey Club Selected">
+                            <img class="img-fluid rounded" src="{{ MEDIA_URL}}{{ item.whiskey_club.image}}" alt="Image of Whiskey Club Selected">
                         </td>
                         <td class="py-3">
                             <p class="my-0"><strong>{{ item.whiskey_club.name }}</strong></p>

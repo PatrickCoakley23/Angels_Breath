@@ -10,14 +10,17 @@ def cart_contents(request):
     subscription_count = 0
     delivery = 0
 
-    for club_id, quantity in cart.items():
+    for club_id,  quantity in cart.items():
         whiskey_club = get_object_or_404(Whiskey_club, pk=club_id)
+     
+
         total += quantity * whiskey_club.price
         cart_items.append(
-            {
+            {   
                 'club_id': club_id,
                 'quantity': quantity,
                 'whiskey_club': whiskey_club,
+
             }
         )
 

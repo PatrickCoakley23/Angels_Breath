@@ -12,9 +12,11 @@ def add_to_cart(request, club_id):
     quantity = 1
     cart = request.session.get('cart', {})
 
+    """
     if cart.items():
         # insert toast here (error)
         return redirect('clubs')
+    """
     
     cart[club_id] = cart.get(club_id, quantity)
 
