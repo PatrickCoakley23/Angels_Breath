@@ -57,53 +57,115 @@ I used [Balsamic](https://balsamiq.com/) to build the wireframes. I created mock
 <details>
 <summary>Desktop Wireframes <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
-  <img height="350" src="wireframes/images/wireframes_landing_page.png" style="max-width:100%;"></a>
+  <img height="350" src="README/wireframes/images/wireframes_landing_page.png" style="max-width:100%;"></a>
 </p>
 <p align="center">
-  <img height="350" src="wireframes/images/wireframes_how_it_works.png" style="max-width:100%;"></a>
+  <img height="350" src="README/wireframes/images/wireframes_how_it_works.png" style="max-width:100%;"></a>
 </p>
 <p align="center">
-  <img height="350" src="wireframes/images/wireframes_choose_your_poison.png" style="max-width:100%;"></a>
+  <img height="350" src="README/wireframes/images/wireframes_choose_your_poison.png" style="max-width:100%;"></a>
 </p>
 <p align="center">
-  <img height="350" src="wireframes/images/wireframes_selected.png" style="max-width:100%;"></a>
+  <img height="350" src="README/wireframes/images/wireframes_selected.png" style="max-width:100%;"></a>
 </p>
 <p align="center">
-  <img height="350" src="wireframes/images/wireframes_choose_your_hit.png" style="max-width:100%;"></a>
+  <img height="350" src="README/wireframes/images/wireframes_choose_your_hit.png" style="max-width:100%;"></a>
 </p>
 <p align="center">
-  <img height="350" src="wireframes/images/wireframes_gift.png" style="max-width:100%;"></a>
+  <img height="350" src="README/wireframes/images/wireframes_gift.png" style="max-width:100%;"></a>
 </p>
 <p align="center">
-  <img height="350" src="wireframes/images/wireframes_about.png" style="max-width:100%;"></a>
+  <img height="350" src="README/wireframes/images/wireframes_about.png" style="max-width:100%;"></a>
 </p>
 <p align="center">
-  <img height="350" src="wireframes/images/wireframes_ordersummary.png" style="max-width:100%;"></a>
+  <img height="350" src="README/wireframes/images/wireframes_ordersummary.png" style="max-width:100%;"></a>
 </p>
 <p align="center">
-  <img height="350" src="wireframes/images/wireframes_login_register.png" style="max-width:100%;"></a>
+  <img height="350" src="README/wireframes/images/wireframes_login_register.png" style="max-width:100%;"></a>
 </p>
 </details>
 
 <details>
 <summary>Tablet Wireframes <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
-  <img height="350" src="wireframes/images/wireframes_ipad.png" style="max-width:100%;"></a>
+  <img height="350" src="README/wireframes/images/wireframe_ipad_1.png" style="max-width:100%;"></a>
 </p>
 <p align="center">
-  <img height="350" src="wireframes/images/wireframes_selected_ipad.png" style="max-width:100%;"></a>
+  <img height="350" src="README/wireframes/images/wireframe_ipad_2.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/wireframes/images/wireframe_ipad_3.png" style="max-width:100%;"></a>
 </p>
 </details>
 
 <details>
 <summary>Phone Wireframes <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
-  <img height="350" src="wireframes/images/wireframes_phone.png" style="max-width:100%;"></a>
+  <img height="350" src="README/wireframes/images/wireframes_phone.png" style="max-width:100%;"></a>
 </p>
 <p align="center">
-  <img height="350" src="wireframes/images/wireframes_selected_phone.png" style="max-width:100%;"></a>
+  <img height="350" src="README/wireframes/images/wireframes_selected_phone.png" style="max-width:100%;"></a>
 </p>
 </details>
+
+## **Design**
+
+### Framework
+I used Bootstrap 4 to build the framework of the website. Bootstrap was the main tool frame responsible for making the Angel's Share website responsive. This means the website automatically resizes itself to look good on all devices, be it mobile, tablet, laptop or desktop.
+
+### Colour Scheme
+
+- **Black** - Black is the dominant colour throughout this website. Black is elegant, sophisticated and it implies a premium brand. The black background gives prominence to the content on the site. I thought the colour black fitted well within the alcohol and whiskey industry in portraying the Angel's Share as a premium brand. 
+
+- **White** - On some of the pages there is a white background as opposed to the dominant black. The reason being i wanted to go for a clean look that doesn't distract the user from the call to action, be it login/registration or selcting the specific whiskey club or subscription. 
+
+- **Dark Green** - Dark green was used mostly in the headings and borders of this site. I felt it contrasted well to stand out and green is assoicated with the celtic origins whiskey. 
+
+- **Light Orange** - The light orange colour is consistently used across the website's call to action buttons. This shade of orange is similar to the amber colour of whiskey. 
+
+#### List of the other colours used throughout the website: 
+
+- #232323 - (Charcoal) 
+
+- #6c757d (Navy Grey) 
+
+- #aab7c4 (Light Grey)
+
+- #17a268 (turquoise)
+
+### Typography
+The “Montserrat” font is the font used for all the headings and the “Lato” font is the font used for the body of the website. Sans serif is set as the fallback font in case for any reason the font isn't being imported into the site correctly.
+
+### Imagery
+Imagery is a reoccurring theme throughout the website. I felt images played a vital role in influencing a users decision in the alcohol industry. 
+The Hero image especially works well in drawing the user in and given the website a very modern feel.
+
+### Logo 
+I created the logo on [Tailor Brands]( https://www.tailorbrands.com/). Although it is a paid service i feel the level of detail and quality of the template they use is worth it. I felt the image is clean, elegant and is positioned well within the whiskey market.  
+<h2 align="center"><img src="README/images/logo_white_background.jpg" max-width="30%"></h2>
+
+
+## **Layout**
+
+### Homepage
+
+The homepage sets up to be enticing while at the same time obvious to the user the purpose of the website. The heading "Experience a different whiskey each month before the angel's take it", prompts the user to click the 'Whiskey Clubs' button. 
+
+- Call to action: 
+
+    - Whiskey Clubs Button - upon clicking users are brought to the 'Choose Your Poison Page'.
+
+<details>
+<summary>Homepage <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/hero_image_cta.jpg" style="max-width:100%;"></a>
+</p>
+</details>  
+
+---
+### Whiskey Club Selected Page
+Once the user clicks the select button on the bottom of the card deck on the Whiskey Clubs page, they are brought to that specific whiskey's details page. This page details a brief description of the whiskey clubs origins and tasting notes. This page also lists what is included in the club package. The cta buttons brings the users to the subscriptions page where they choose the length of their club package. 
+
 
 ## Credits
 
