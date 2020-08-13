@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.shortcuts import get_object_or_404
-from clubs.models import Whiskey_club
+from clubs.models import Subscription_type, Whiskey_club
 
 
 def cart_contents(request):
@@ -10,16 +10,18 @@ def cart_contents(request):
     subscription_count = 0
     delivery = 0
 
-    for club_id,  quantity in cart.items():
-        whiskey_club = get_object_or_404(Whiskey_club, pk=club_id)
+    for sub_id,  quantity in cart.items():
+        subscription = get_object_or_404(Subscription_type, pk=sub_id)
+        # whiskey = get_object_or_404(Whiskey_club)
      
 
-        total += quantity * whiskey_club.price
+        total += quantity * subscription.price
         cart_items.append(
             {   
-                'club_id': club_id,
+                'sub_id': sub_id,
                 'quantity': quantity,
-                'whiskey_club': whiskey_club,
+                'subscription': subscription
+                # 'whiskey': whiskey
 
             }
         )

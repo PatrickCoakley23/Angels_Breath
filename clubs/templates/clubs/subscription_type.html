@@ -30,11 +30,11 @@
                                 <div>
                                 <p class="lead mb-0 text-left font-weight-bold text-center d-flex">€{{ sub.price }}</p>
                                 </div>
-							<form class="form" method="POST" action="{% url 'add_to_cart' club_selected.id %}">
+							<form class="form" method="POST" action="{% url 'add_to_cart' sub.id %}">
 								{% csrf_token %}
 								<div class="row button-center">
 									<div class="col button-center">
-										<a href="{% url 'add_to_cart' club_selected.id %}" class="btn btn-orange rounded-0 text-uppercase">
+										<a href="{% url 'add_to_cart' sub.id %}" class="btn btn-orange rounded-0 text-uppercase">
 											<input type="submit" value="join now">
 							            </a>
 									</div>

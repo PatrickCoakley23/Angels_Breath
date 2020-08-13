@@ -4,7 +4,6 @@ from .models import Whiskey_club, Subscription_type
 
 # Create your views here.
 
-
 def whiskey_clubs(request):
     """ a view to return the different whiskey clubs users can subscribe to"""
 
@@ -21,7 +20,7 @@ def club_selected(request, club_id):
     """ a view to return a more detailed look at the whiskey club selected"""
 
     club_selected = get_object_or_404(Whiskey_club, pk=club_id)
-    
+
     context = {
         'club_selected': club_selected,
     }

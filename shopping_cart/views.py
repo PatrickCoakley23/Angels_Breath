@@ -7,9 +7,10 @@ def shopping_cart(request):
     return render(request, 'shopping_cart/cart.html')
 
 
-def add_to_cart(request, club_id):
+def add_to_cart(request, sub_id):
     quantity = 1
     cart = request.session.get('cart', {})
+    
 
     """
     if cart.items():
@@ -17,7 +18,7 @@ def add_to_cart(request, club_id):
         return redirect('clubs')
     """
     
-    cart[club_id] = cart.get(club_id, quantity)
+    cart[sub_id] = cart.get(sub_id, quantity)
     messages.success(request, f'Added club to your bag')
 
     request.session['cart'] = cart
