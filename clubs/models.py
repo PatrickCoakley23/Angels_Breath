@@ -25,7 +25,7 @@ class Subscription_type(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2,
                                 null=True, blank=True)
     whiskey_clubs = models.ManyToManyField(Whiskey_club,
-                                           through='Subscriptions')
+                                           through='Subscriptions', related_name="whiskey_clubs")
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
@@ -37,9 +37,9 @@ class Subscriptions(models.Model):
     class Meta:
         verbose_name_plural = "Subscriptions"
 
-    whiskey_club = models.ForeignKey(Whiskey_club, on_delete=models.CASCADE)
+    whiskey_club = models.ForeignKey(Whiskey_club, on_delete=models.CASCADE, related_name="club_subs")
     Subscription_type = models.ForeignKey(Subscription_type,
-                                          on_delete=models.CASCADE)
+                                          on_delete=models.CASCADE, related_name="club_subs")
 
     def __str__(self):
         return self.name

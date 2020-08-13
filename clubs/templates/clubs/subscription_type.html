@@ -30,7 +30,7 @@
                                 <div>
                                 <p class="lead mb-0 text-left font-weight-bold text-center d-flex">€{{ sub.price }}</p>
                                 </div>
-							<form class="form" method="POST" action="{% url 'add_to_cart' sub.id %}">
+							<form class="form" method="POST" action="{% url 'add_to_cart' sub.id%}">
 								{% csrf_token %}
 								<div class="row button-center">
 									<div class="col button-center">

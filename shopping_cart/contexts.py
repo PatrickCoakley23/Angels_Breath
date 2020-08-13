@@ -10,19 +10,18 @@ def cart_contents(request):
     subscription_count = 0
     delivery = 0
 
-    for sub_id,  quantity in cart.items():
+    for sub_id, quantity in cart.items():
         subscription = get_object_or_404(Subscription_type, pk=sub_id)
-        # whiskey = get_object_or_404(Whiskey_club)
-     
+        #club = subscription.whiskey_clubs.filter(pk=club_id)
+        
 
         total += quantity * subscription.price
         cart_items.append(
             {   
                 'sub_id': sub_id,
                 'quantity': quantity,
-                'subscription': subscription
-                # 'whiskey': whiskey
-
+                'subscription': subscription,
+                #'club': club,
             }
         )
 

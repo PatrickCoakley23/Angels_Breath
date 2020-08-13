@@ -18,7 +18,7 @@ def add_to_cart(request, sub_id):
         return redirect('clubs')
     """
     
-    cart[sub_id] = cart.get(sub_id, quantity)
+    cart[sub_id ] = cart.get(sub_id, quantity)
     messages.success(request, f'Added club to your bag')
 
     request.session['cart'] = cart
