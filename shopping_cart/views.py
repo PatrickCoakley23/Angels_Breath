@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-
+from django.contrib import messages
 
 def shopping_cart(request):
     """ a view to return shopping cart"""
@@ -8,7 +8,6 @@ def shopping_cart(request):
 
 
 def add_to_cart(request, club_id):
-    """ Add club before deciding subscription"""
     quantity = 1
     cart = request.session.get('cart', {})
 
@@ -19,6 +18,7 @@ def add_to_cart(request, club_id):
     """
     
     cart[club_id] = cart.get(club_id, quantity)
+    messages.success(request, f'Added club to your bag')
 
     request.session['cart'] = cart
     print(request.session['cart'])
