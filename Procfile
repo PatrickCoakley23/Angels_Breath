@@ -1,0 +1,1 @@
+web: gunicorn angels_share.wsgi:application
