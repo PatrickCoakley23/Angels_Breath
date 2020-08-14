@@ -2,10 +2,10 @@ from django.shortcuts import render, get_object_or_404
 from .models import Whiskey_club, Subscription_type
 
 
-# Create your views here.
-
 def whiskey_clubs(request):
-    """ a view to return the different whiskey clubs users can subscribe to"""
+    """
+    A view which renders all the whiskey clubs on "Choose Your Posion" Page.
+    """
 
     whiskey_clubs = Whiskey_club.objects.all()
 
@@ -17,7 +17,11 @@ def whiskey_clubs(request):
 
 
 def club_selected(request, club_id):
-    """ a view to return a more detailed look at the whiskey club selected"""
+    """
+    This view grabs the id of the whiskey_club selected
+    and brings the user to a more page
+    with more details on that whiskey
+    """
 
     club_selected = get_object_or_404(Whiskey_club, pk=club_id)
 
@@ -29,11 +33,16 @@ def club_selected(request, club_id):
 
 
 def choose_subscription(request, club_id):
-    """ a view to show the subscription options """
+    """ This view collects the id of the Whiskey type the
+        user has chosen and
+        lists all the subscription types available
+    """
+    club_selected = get_object_or_404(Whiskey_club, pk=club_id)
+    # picks up the specific whiskey selected id
 
-    club_selected = get_object_or_404(Whiskey_club, pk=club_id) #picks up the specific whiskey selected id
-
-    subscriptions = Subscription_type.objects.all() #this gets all the information like price, subsciption time(3 months/ 6months etc)
+    subscriptions = Subscription_type.objects.all()
+    # this gets all the information like price,
+    # subscription time(3 months/ 6months etc)
 
     context = {
         'club_selected': club_selected,
