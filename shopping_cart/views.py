@@ -1,5 +1,6 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib import messages
+from clubs.models import Subscription_type, Whiskey_club, Subscriptions
 
 
 def shopping_cart(request):
@@ -8,7 +9,7 @@ def shopping_cart(request):
     return render(request, 'shopping_cart/cart.html')
 
 
-def add_to_cart(request, sub_id):
+def add_to_cart(request, sub_id, club_id):
     """Most of this functions variables are derived from
     the contexts processor in contexts.py
     in the shopping cart app. This is so the shopping bag,
@@ -17,6 +18,33 @@ def add_to_cart(request, sub_id):
 
     quantity = 1
     cart = request.session.get('cart', {})
+    clubs_in_cart = []
+    for subscription, sub_details in cart.items():
+        clubs_in_cart.append(sub_details['club_id'])
+
+    if club_id in clubs_in_cart:
+        messages.error(request, "You've already got a subscription to that club in your cart!")
+        return redirect(reverse('clubs'))    
+
+    # subscription = get_object_or_404(Subscription_type, pk=sub_id)
+    club = get_object_or_404(Whiskey_club, pk=club_id)
+
+    existing_subs = Subscriptions.objects.filter(
+        user_profile=request.user.userprofile,
+        whiskey_club=club,
+    )
+    if existing_subs:
+        messages.error(request, "You've already got a subscription!")
+        return redirect(reverse('clubs'))
+
+    # sub = Subscriptions.objects.create(
+    #     user_profile=request.user.userprofile,
+    #     whiskey_club=club,
+    #     subscription_type=subscription
+    # )
+    # print(sub)
+
+    
 
     """
     if cart.items():
@@ -24,7 +52,11 @@ def add_to_cart(request, sub_id):
         return redirect('clubs')
     """
 
-    cart[sub_id] = cart.get(sub_id, quantity)
+    cart[sub_id] = cart.get(sub_id, {
+        'club_id': club_id,
+        'quantity': quantity
+        })
+
     messages.success(request, 'Added club to your bag')
 
     request.session['cart'] = cart

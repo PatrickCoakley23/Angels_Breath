@@ -8,7 +8,7 @@ def whiskey_clubs(request):
     """
 
     whiskey_clubs = Whiskey_club.objects.all()
-
+    
     context = {
         'whiskey_clubs': whiskey_clubs,
     }
