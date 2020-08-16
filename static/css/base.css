@@ -75,6 +75,10 @@ header {
     color: white !important;
 }
 
+.remove-sub, .update-sub {
+    cursor: pointer;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {

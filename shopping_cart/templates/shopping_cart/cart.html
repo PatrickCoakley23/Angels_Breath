@@ -31,13 +31,26 @@
                     {% for item in cart_items %}
                     <tr>
                         <td class="p-3 w-25">
-                            <img class="img-fluid rounded" src="{{ MEDIA_URL}}{{ item.subscription.whiskey.image}}" alt="">
+                            <img class="img-fluid rounded" src="{{ MEDIA_URL}}{{ item.club.image}}" alt="">
                         </td>
                         <td class="py-3">
                             <p class="my-0"><strong><p>{{ item.club.name }}</p></strong></p>
                         </td>
                         <td class="py-3">
-                            <p class="my-0"><strong>{{ item.subscription.name }}</strong></p>
+                            <form class="form update-form" method="POST" action="">
+                            {% csrf_token %}
+							    <select id="change_subscription" class="form-control" name="change_subscription">
+                                    {% for sub in item.all_subs %}
+                                    {% if sub.name == item.subscription.name %}
+                                    <option value="{{item.subscription.name }}" selected> {{sub.name}} </option>
+                                    {% else %}
+                                    <option value="{{ sub.name }}">{{ sub.name }}</option>
+                                    {% endif %}
+                                    {% endfor%}
+                                </select>
+                            </form>
+                            <a class="update-sub text-info"><small>Update</small></a>
+                            <a class="remove-sub text-danger float-right" id="remove_{{ item.sub_id }}"><small>Remove item from bag</small></a>
                         </td>
                         <td class="py-3">
                             <p class="my-0">${{ item.subscription.price }}</p>
@@ -88,4 +101,31 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+<script type="text/javascript">
+     
+     // Update quantity on click
+    $('.update-sub').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.remove-sub').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var subId = $(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove/${subId}/`;
+
+        $.post(url)
+         .done(function() {
+             location.reload();
+         });
+    })
+
+
+
+</script>
+
 {% endblock %}
