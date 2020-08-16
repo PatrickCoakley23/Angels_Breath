@@ -35,22 +35,24 @@
                         </td>
                         <td class="py-3">
                             <p class="my-0"><strong><p>{{ item.club.name }}</p></strong></p>
+                            <p></p>
                         </td>
+                        
                         <td class="py-3">
-                            <form class="form update-form" method="POST" action="">
+                            <form class="form update-form" method="POST" action="{% url 'update_cart' item.club.id %}">
                             {% csrf_token %}
 							    <select id="change_subscription" class="form-control" name="change_subscription">
                                     {% for sub in item.all_subs %}
                                     {% if sub.name == item.subscription.name %}
-                                    <option value="{{item.subscription.name }}" selected> {{sub.name}} </option>
+                                    <option value="{{ item.subscription.id }}" selected> {{item.subscription.name}} </option>
                                     {% else %}
-                                    <option value="{{ sub.name }}">{{ sub.name }}</option>
+                                    <option value="{{ sub.id }}">{{ sub.name }}</option>
                                     {% endif %}
                                     {% endfor%}
                                 </select>
                             </form>
                             <a class="update-sub text-info"><small>Update</small></a>
-                            <a class="remove-sub text-danger float-right" id="remove_{{ item.sub_id }}"><small>Remove item from bag</small></a>
+                            <a class="remove-sub text-danger float-right" id="{{ item.subscription.id }}"><small>Remove item from bag</small></a>
                         </td>
                         <td class="py-3">
                             <p class="my-0">${{ item.subscription.price }}</p>
@@ -116,7 +118,7 @@
     $('.remove-sub').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
         var subId = $(this).attr('id').split('remove_')[1];
-        var url = `/bag/remove/${subId}/`;
+        var url = `/shopping_cart/delete_sub/${subId}/`;
 
         $.post(url)
          .done(function() {

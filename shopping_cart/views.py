@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404, reverse
+from django.shortcuts import render, redirect, get_object_or_404, reverse, HttpResponse
 from django.contrib import messages
 from clubs.models import Subscription_type, Whiskey_club, Subscriptions
 
@@ -62,3 +62,40 @@ def add_to_cart(request, sub_id, club_id):
     request.session['cart'] = cart
     print(request.session['cart'])
     return redirect('shopping_cart')
+
+def update_cart(request, club_id):
+    quantity = 1
+    cart = request.session.get('cart', {})
+    sub_id = request.POST['change_subscription']
+    
+
+    cart[sub_id] = cart.get(sub_id, {
+        'club_id': club_id,
+        'quantity': quantity,
+        })
+
+    request.session['cart'] = cart
+    return redirect(reverse('shopping_cart'))
+   
+def delete_sub(request, sub_id):
+    quantity = 1
+    cart = request.session.get('cart', {})
+    subscription = get_object_or_404(Subscription_type, pk=sub_id)
+
+    cart.pop(subscription)
+
+    cart[sub_id] = cart.get(sub_id, {
+    'club_id': club_id,
+    'quantity': quantity,
+    })
+
+    request.session['cart'] = cart
+    return HttpResponse(status=200)
+    
+
+
+
+
+
+    
+
