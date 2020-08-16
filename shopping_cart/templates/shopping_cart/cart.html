@@ -31,7 +31,7 @@
                     {% for item in cart_items %}
                     <tr>
                         <td class="p-3 w-25">
-                            <img class="img-fluid rounded" src="{{ MEDIA_URL}}{{ item.club.image}}" alt="">
+                            <img class="img-fluid rounded" src="{{ MEDIA_URL}}{{ item.club.image}}" alt="{{ item.club.name }}">
                         </td>
                         <td class="py-3">
                             <p class="my-0"><strong><p>{{ item.club.name }}</p></strong></p>
@@ -81,7 +81,7 @@
                             </span>
                             <span class="text-uppercase">Keep Shopping</span>
                             </a> 
-                            <a href="" class="btn btn-black rounded-0 btn-lg">
+                            <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
                             <span class="text-uppercase">Secure Checkout</span>
                             <span class="icon">
                             <i class="fas fa-lock"></i>
