@@ -77,9 +77,8 @@ def update_cart(request, club_id):
         'quantity': quantity,
         })
 
-    print(cart[new_sub_id])
+   
     request.session['cart'] = cart
-    print(request.session['cart'])
     return redirect(reverse('shopping_cart'))
 
 
