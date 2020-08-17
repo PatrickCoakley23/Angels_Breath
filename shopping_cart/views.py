@@ -45,7 +45,6 @@ def add_to_cart(request, sub_id, club_id):
     # print(sub)
 
     
-
     """
     if cart.items():
         # insert toast here (error)
@@ -63,18 +62,21 @@ def add_to_cart(request, sub_id, club_id):
     print(request.session['cart'])
     return redirect('shopping_cart')
 
+
 def update_cart(request, club_id):
     quantity = 1
     cart = request.session.get('cart', {})
-    sub_id = request.POST['change_subscription']
-    
 
-    cart[sub_id] = cart.get(sub_id, {
+    new_sub_id = request.POST['change_subscription'] # here i am changing the sub_id depending on the value selected in the dropdown
+    
+    cart[new_sub_id] = cart.get(new_sub_id, {
         'club_id': club_id,
         'quantity': quantity,
         })
 
+    print(cart[new_sub_id])
     request.session['cart'] = cart
+    print(request.session['cart'])
     return redirect(reverse('shopping_cart'))
    
 def delete_sub(request, sub_id):
@@ -90,6 +92,7 @@ def delete_sub(request, sub_id):
     })
 
     request.session['cart'] = cart
+    print(request.session['cart'])
     return HttpResponse(status=200)
     
 
