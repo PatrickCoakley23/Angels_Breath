@@ -66,6 +66,9 @@ def add_to_cart(request, sub_id, club_id):
 def update_cart(request, club_id):
     quantity = 1
     cart = request.session.get('cart', {})
+    old_sub_id = request.POST.get('current_sub_id')
+
+    del cart[old_sub_id]
 
     new_sub_id = request.POST['change_subscription'] # here i am changing the sub_id depending on the value selected in the dropdown
 

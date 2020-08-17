@@ -49,6 +49,7 @@
                                     <option value="{{ sub.id }}">{{ sub.name }}</option>
                                     {% endif %}
                                     {% endfor%}
+                                    <input type="hidden" value="{{ item.subscription.id }}" name="current_sub_id" />
                                 </select>
                             </form>
                             <a class="update-sub text-info"><small>Update</small></a>
