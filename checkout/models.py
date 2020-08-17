@@ -33,7 +33,7 @@ class Order(models.Model):
         """
         Update grand total each time a line item is added,
         """
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] 
         self.grand_total = self.order_total
         self.save()
 
@@ -64,6 +64,7 @@ class OrderLineItem(models.Model):
         and update the order total.
         """
         self.lineitem_total = self.subscription_type.price * self.quantity
+        super().save(*args, **kwargs)
         
     def __str__(self):
         return f'{self.whiskey_club.name} for {self.subscription_type.name} on order {self.order.order_number}'

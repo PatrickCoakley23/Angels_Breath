@@ -24,7 +24,7 @@ def add_to_cart(request, sub_id, club_id):
 
     if club_id in clubs_in_cart:
         messages.error(request, "You've already got a subscription to that club in your cart!")
-        return redirect(reverse('clubs'))    
+        return redirect(reverse('clubs'))
 
     # subscription = get_object_or_404(Subscription_type, pk=sub_id)
     club = get_object_or_404(Whiskey_club, pk=club_id)
@@ -68,7 +68,7 @@ def update_cart(request, club_id):
     cart = request.session.get('cart', {})
 
     new_sub_id = request.POST['change_subscription'] # here i am changing the sub_id depending on the value selected in the dropdown
-    
+
     cart[new_sub_id] = cart.get(new_sub_id, {
         'club_id': club_id,
         'quantity': quantity,
@@ -78,7 +78,8 @@ def update_cart(request, club_id):
     request.session['cart'] = cart
     print(request.session['cart'])
     return redirect(reverse('shopping_cart'))
-   
+
+
 def delete_sub(request, sub_id):
     quantity = 1
     cart = request.session.get('cart', {})

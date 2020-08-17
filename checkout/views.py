@@ -32,21 +32,23 @@ def checkout(request):
             order = order_form.save()
 
             for sub_id, sub_details in cart.items():
-                subscription_type = get_object_or_404(Subscription_type, pk=sub_id)
+                subscription_type = get_object_or_404(Subscription_type, id=sub_id)
                 whiskey_club = get_object_or_404(Whiskey_club, pk=sub_details['club_id'])
                 order_line_item = OrderLineItem(
+                        order=order,
                         subscription_type=subscription_type,
                         whiskey_club=whiskey_club,
                         quantity=sub_details['quantity'],
-                    )
+                )
                 order_line_item.save()
+                print(order_line_item)
 
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
-        
+
     else:
         cart = request.session.get('cart', {})
         if not cart:
