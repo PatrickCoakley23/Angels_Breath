@@ -50,7 +50,11 @@ def checkout(request):
 
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            order = order_form.save()
+            order = order_form.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            order.original_cart = json.dumps(cart)
+            order.save()
 
             for sub_id, sub_details in cart.items():
                 subscription_type = get_object_or_404(Subscription_type, id=sub_id)
@@ -62,8 +66,7 @@ def checkout(request):
                         quantity=sub_details['quantity'],
                 )
                 order_line_item.save()
-                print(order_line_item)
-
+                
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
