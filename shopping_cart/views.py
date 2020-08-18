@@ -39,6 +39,8 @@ def add_to_cart(request, sub_id, club_id):
         messages.error(request, "You've already got a subscription to that club on our database!")
         return redirect(reverse('clubs'))
 
+ 
+
 
     cart[sub_id] = cart.get(sub_id, {
         'club_id': club_id,
