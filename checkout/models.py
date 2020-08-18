@@ -1,5 +1,4 @@
 import uuid
-
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
@@ -64,6 +63,8 @@ class OrderLineItem(models.Model):
     subscription_type = models.ForeignKey(Subscription_type, null=True, blank=False, on_delete=models.CASCADE) 
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
+                                     null=True, blank=True)
 
     
     def save(self, *args, **kwargs):

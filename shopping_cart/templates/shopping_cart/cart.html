@@ -53,7 +53,7 @@
                                 </select>
                             </form>
                             <a class="update-sub text-info"><small>Update</small></a>
-                            <a class="remove-sub text-danger float-right" id="{{ item.subscription.id }}"><small>Remove item from bag</small></a>
+                            <a class="remove-sub text-danger float-right" id="{{ item.club.id }}" href="{% url 'delete_sub' item.club.id item.subscription.id %}"><small>Remove item from bag</small></a>
                         </td>
                         <td class="py-3">
                             <p class="my-0">${{ item.subscription.price }}</p>
@@ -114,21 +114,7 @@
         var form = $(this).prev('.update-form');
         form.submit();
     })
-
-    // Remove item and reload on click
-    $('.remove-sub').click(function(e) {
-        var csrfToken = "{{ csrf_token }}";
-        var subId = $(this).attr('id').split('remove_')[1];
-        var url = `/shopping_cart/delete_sub/${subId}/`;
-
-        $.post(url)
-         .done(function() {
-             location.reload();
-         });
     })
-
-
-
 </script>
 
 {% endblock %}

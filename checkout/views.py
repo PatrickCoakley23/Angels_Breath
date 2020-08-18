@@ -7,6 +7,7 @@ from .forms import OrderForm
 from clubs.models import Whiskey_club, Subscription_type
 from .models import OrderLineItem, Order
 from shopping_cart.contexts import cart_contents
+from profiles.models import UserProfile
 
 
 import stripe
@@ -64,6 +65,7 @@ def checkout(request):
                         subscription_type=subscription_type,
                         whiskey_club=whiskey_club,
                         quantity=sub_details['quantity'],
+                        user_profile=request.user.userprofile
                 )
                 order_line_item.save()
                 
