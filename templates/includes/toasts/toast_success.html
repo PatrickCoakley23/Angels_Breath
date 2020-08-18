@@ -18,10 +18,10 @@
             <div class="bag-notification-wrapper">
                 {% for item in cart_items %}
                     <div class="row">
-                        <div class="col-3 my-1">
+                        <div class="col-4 my-1">
                             <img class="w-100" src="{{ MEDIA_URL}}{{ item.club.image}}" alt="{{ item.club.name }}">
                         </div>
-                        <div class="col-9">
+                        <div class="col-8">
                             <p class="my-0"><strong>{{ item.club.name }}</strong></p>
                             <p class="my-1 small">{{ item.subscription.name}}</p>
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
