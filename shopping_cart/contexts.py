@@ -25,7 +25,6 @@ def cart_contents(request):
         cart_items.append(
             {
                 'club_id': club_id,
-                #'sub_id': sub_id,
                 'quantity': club_details['quantity'],
                 'subscription': subscription,
                 'club': club,

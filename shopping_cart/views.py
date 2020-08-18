@@ -53,19 +53,13 @@ def update_cart(request, club_id):
     quantity = 1
     cart = request.session.get('cart', {})
     old_sub_id = request.POST.get('current_sub_id')
-
-    del cart[old_sub_id]
-
     new_sub_id = request.POST['change_subscription'] # here i am changing the sub_id depending on the value selected in the dropdown
 
-    cart[new_sub_id] = cart.get(new_sub_id, {
-        'club_id': club_id,
-        'quantity': quantity,
-        })
+    cart[club_id]['sub_id'] = new_sub_id
 
-   
     request.session['cart'] = cart
     return redirect(reverse('shopping_cart'))
+
 
 
 def delete_sub(request, club_id, sub_id):
