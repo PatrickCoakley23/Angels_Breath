@@ -2,36 +2,33 @@
 {% load static %}
 {% block content %}
 <!--This templates iterates through all the subscription types-->
+<div class="overlay"></div>
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-5">
-            <h2>Choose Your Hit</h2>
+            <h2 class="text-orange">Choose Your Hit</h2>
             <hr class="w-50 mb-5">
         </div>
     </div>
     <div class="row">
         <div class="clubs-container col-10 offset-1">
             <!--Subscription CARD DECKS-->
-            <div class="row">
+            <div class="row mb-5">
                 {% for sub in subscriptions %}
-                <div class="col-12 col-md-4 recipe-card-col">
-                    <div class="card h-100">
+                <div class="col-12 col-md-4 whiskey-card-col">
+                    <div class="card  d-flex align-items-center justify-content-center h-100">
                         <img class="card-img-top card-image-holder clubs-image" src="{{ MEDIA_URL}}{{ sub.image }}" alt="Card image cap">
-                        <div class="card-body d-flex flex-column">
+                        <div class="card-body d-flex flex-column h-100">
                             <h5 class="card-title text-center ">{{sub.name }}</h5>
-                            <hr>
                             <h6>Club Selected: {{club_selected.name}}</h6>
                             <p class="card-text">{{ sub.description }}</p>
-                            
-                            
-                            <div>
-                                <p class="lead mb-0 text-left font-weight-bold text-center d-flex">€{{ sub.price }}</p>
-                            </div>
+                            <p class="text-center">€{{ sub.price }}</p>
+
                             <form class="form" method="POST" action="{% url 'add_to_cart' sub.id club_selected.id %}">
                                 {% csrf_token %}
-                                <div class="row button-center">
+                                <div class="row">
                                     <div class="col button-center">
-                                         <input type="submit" value="join now">
+                                         <input type="submit" value="join now" class=" btn btn-orange">
                                     </div>
                                 </div>
                             </form>

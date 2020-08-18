@@ -24,7 +24,7 @@ header {
 }
 
 .navbar-nav .nav-link:hover {
-    color: #21853f;
+    color: #ff9d37;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -159,6 +159,26 @@ header {
     }  
 }
 
+.card-body p , a {
+    color: white;
+    text-align: center;
+}
+
+.card-body h5 {
+    color: #ff9d37;
+    text-align: center;
+}
+
+.card {
+    background-color: #232323;
+}
+
+@media (max-width: 768px) {
+    .whiskey-card-col {
+        margin: 20px 0;
+    }
+}
+
 /* Club Selected */
 
 .club-selected-image {
@@ -221,12 +241,6 @@ header {
     display: block;
     text-align: center;
 }
-
-.button-center {
-    text-align: center;
-    margin-top: 10px;
-}
-
 
 /* Allauth form formatting */
 
