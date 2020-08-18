@@ -243,13 +243,6 @@ header {
     text-align: center;
 }
 
-.whiskey-about-container {
-    background: url('/media/hero_image.jpg') no-repeat center center fixed;
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
-    height:50vh;
-}
 
 /* 404 page */
 
@@ -257,6 +250,14 @@ header {
     width: 100%;
     margin-bottom: 20px;
     height: 400px;
+}
+
+.about_image {
+    background: url('/media/horizontal_whiskey_img.jpg') no-repeat center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    height: 50vh;
 }
 
 .jumbotron {
