@@ -8,17 +8,25 @@ def cart_contents(request):
     cart_items = []
     total = 0
     delivery = 0
-
+    
+    """
     for sub_id, sub_details in cart.items():
         subscription = get_object_or_404(Subscription_type, pk=sub_id)
         club = get_object_or_404(Whiskey_club, pk=sub_details['club_id'])
         all_subs = Subscription_type.objects.all()
+    """
+
+    for club_id, club_details in cart.items():
+        club = get_object_or_404(Whiskey_club, pk=club_id)
+        subscription = get_object_or_404(Subscription_type, pk=club_details['sub_id'])
+        all_subs = Subscription_type.objects.all()
       
-        total += sub_details['quantity'] * subscription.price
+        total += club_details['quantity'] * subscription.price
         cart_items.append(
             {
-                'sub_id': sub_id,
-                'quantity': sub_details['quantity'],
+                'club_id': club_id,
+                #'sub_id': sub_id,
+                'quantity': club_details['quantity'],
                 'subscription': subscription,
                 'club': club,
                 'all_subs': all_subs,

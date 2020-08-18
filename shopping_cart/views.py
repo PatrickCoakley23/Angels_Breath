@@ -18,17 +18,10 @@ def add_to_cart(request, sub_id, club_id):
     """
 
     # Cart is a dictionary and the objects are a dictionary nested within the cart dictionary
+    
     quantity = 1
     cart = request.session.get('cart', {})
-    clubs_in_cart = []
-    for subscription, sub_details in cart.items():
-        clubs_in_cart.append(sub_details['club_id'])
-
-    # Prevents Users from having two of the same whiskey_clubs in the cart
-    if club_id in clubs_in_cart:
-        messages.error(request, "You've already got a subscription to that club in your cart!")
-        return redirect(reverse('clubs'))
-
+     
     # Checks to see if you have that club already in an order on our database
     club = get_object_or_404(Whiskey_club, pk=club_id)  
     existing_subs = OrderLineItem.objects.filter(
@@ -39,17 +32,20 @@ def add_to_cart(request, sub_id, club_id):
         messages.error(request, "You've already got a subscription to that club on our database!")
         return redirect(reverse('clubs'))
 
- 
+    # Prevents Users from having two of the same whiskey_clubs in the cart
+    if club_id in list(cart.keys()):
+        messages.error(request, "You've already got a subscription to that club in your cart!")
+        return redirect(reverse('clubs'))
 
-
-    cart[sub_id] = cart.get(sub_id, {
-        'club_id': club_id,
+    cart[club_id] = cart.get(club_id, {
+        'sub_id': sub_id,
         'quantity': quantity
         })
-
+    
     messages.success(request, 'Added club to your bag')
 
     request.session['cart'] = cart
+    print(cart)
     return redirect('shopping_cart')
 
 
@@ -80,13 +76,4 @@ def delete_sub(request, club_id, sub_id):
 
     del cart[sub_id]
     request.session['cart'] = cart
-    return redirect(reverse('shopping_cart'))
-    
-    
-
-
-
-
-
-    
-
+    return redirect(reverse('shopping_cart')) 
