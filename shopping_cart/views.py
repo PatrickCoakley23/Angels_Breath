@@ -64,10 +64,8 @@ def update_cart(request, club_id):
 
 def delete_sub(request, club_id, sub_id):
     cart = request.session.get('cart', {})
-    
-    print(club_id)
-    print(sub_id)
 
-    del cart[sub_id]
+    del cart[club_id]
+    
     request.session['cart'] = cart
     return redirect(reverse('shopping_cart')) 
