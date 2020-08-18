@@ -29,36 +29,35 @@ def add_to_cart(request, sub_id, club_id):
         whiskey_club=club,
     )
     if existing_subs:
-        messages.error(request, "You've already got a subscription to that club on our database!")
+        messages.error(request, f"You've already got a subscription to {club.name}  on our database!")
         return redirect(reverse('clubs'))
 
     # Prevents Users from having two of the same whiskey_clubs in the cart
     if club_id in list(cart.keys()):
-        messages.error(request, "You've already got a subscription to that club in your cart!")
-        return redirect(reverse('clubs'))
 
+        messages.error(request, f"You've already got a subscription to {club.name} in your cart!")
+        return redirect(reverse('clubs'))
     cart[club_id] = cart.get(club_id, {
         'sub_id': sub_id,
         'quantity': quantity
         })
-    
-    messages.success(request, 'Added club to your bag')
+
+    messages.success(request, f'Added {club.name} to your bag')
 
     request.session['cart'] = cart
-    print(cart)
-    return redirect('shopping_cart')
+    return redirect('clubs')
 
 
 def update_cart(request, club_id):
     quantity = 1
     cart = request.session.get('cart', {})
-    old_sub_id = request.POST.get('current_sub_id')
     new_sub_id = request.POST['change_subscription'] # here i am changing the sub_id depending on the value selected in the dropdown
 
     cart[club_id]['sub_id'] = new_sub_id
 
     request.session['cart'] = cart
     return redirect(reverse('shopping_cart'))
+
 
 
 
