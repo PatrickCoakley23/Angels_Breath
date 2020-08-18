@@ -8,6 +8,9 @@ h1, h2, h3, h4, h5 {
     font-family: 'Montserrat', sans-serif;
 }
 
+.text-orange {
+    color: #ff9d37;
+}
 
 /* NAVBAR */
 
@@ -174,6 +177,7 @@ header {
 
 .container-charcoal {
     background-color: #232323;
+    color: white;
 }
 
 @media (min-width: 768px) { 
@@ -204,6 +208,25 @@ header {
         height: 85vh;
     }
 }
+
+/* About Page */
+.about-container {
+    min-height: 400px;
+}
+
+.icon-block {
+    margin-bottom: 20px;
+    font-size: 45px;
+    line-height: 45px;
+    display: block;
+    text-align: center;
+}
+
+.button-center {
+    text-align: center;
+    margin-top: 10px;
+}
+
 
 /* Allauth form formatting */
 
