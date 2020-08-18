@@ -16,6 +16,7 @@ h1, h2, h3, h4, h5 {
 
 header {
     background-color: #282828;
+    position: sticky;
 }
 
 .navbar-nav .nav-link {
@@ -240,6 +241,26 @@ header {
     line-height: 45px;
     display: block;
     text-align: center;
+}
+
+.whiskey-about-container {
+    background: url('/media/hero_image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    height:50vh;
+}
+
+/* 404 page */
+
+.error_img {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 400px;
+}
+
+.jumbotron {
+    background-color: #ededed
 }
 
 /* Allauth form formatting */

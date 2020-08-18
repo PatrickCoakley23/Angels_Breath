@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+<div class="container">
+	<div class="row my-5">
+		<div class="col-12 col-md-4 d-flex">
+			<img src="{{ MEDIA_URL}}404_image.jpg" alt="404 image" class="error_img">
+        </div>
+		<div class="col-12 col-md-8 jumbotron">
+				<h2 class="text-center text-capitalize mb-3">Oops this is definitely not where you want to Be!</h2>
+				<h5 class="text-center text-capitalize mb-3">Click the button below get back to the homepage!</h5>
+			<div class="row button-center">
+				<div class="col button-center mb-3">
+                    <a href="{% url 'home' %}" class="btn btn-orange btn-lg rounded-0"> 
+                        <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">The Angel's Drop</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
