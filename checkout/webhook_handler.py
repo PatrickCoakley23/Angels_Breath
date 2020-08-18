@@ -81,14 +81,15 @@ class StripeWH_Handler:
                         original_cart=cart,
                         stripe_pid=pid,
                 )
-                for sub_id, sub_details in json.loads(cart).items():
-                    subscription_type = get_object_or_404(Subscription_type, id=sub_id)
-                    whiskey_club = get_object_or_404(Whiskey_club, pk=sub_details['club_id'])
+            
+                for club_id, club_details in json.loads(cart).items():
+                    club = get_object_or_404(Whiskey_club, pk=club_id)
+                    subscription = get_object_or_404(Subscription_type, pk=club_details['sub_id'])
                     order_line_item = OrderLineItem(
                         order=order,
                         subscription_type=subscription_type,
                         whiskey_club=whiskey_club,
-                        quantity=sub_details['quantity'],
+                        quantity=club_details['quantity'],
                     )
                     order_line_item.save()
             except Exception as e:

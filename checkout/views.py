@@ -57,14 +57,14 @@ def checkout(request):
             order.original_cart = json.dumps(cart)
             order.save()
 
-            for sub_id, sub_details in cart.items():
-                subscription_type = get_object_or_404(Subscription_type, id=sub_id)
-                whiskey_club = get_object_or_404(Whiskey_club, pk=sub_details['club_id'])
+            for club_id, club_details in cart.items():
+                subscription_type = get_object_or_404(Subscription_type, pk=club_details['sub_id'])
+                whiskey_club = get_object_or_404(Whiskey_club, id=club_id)
                 order_line_item = OrderLineItem(
                         order=order,
                         subscription_type=subscription_type,
                         whiskey_club=whiskey_club,
-                        quantity=sub_details['quantity'],
+                        quantity=club_details['quantity'],
                         user_profile=request.user.userprofile
                 )
                 order_line_item.save()
