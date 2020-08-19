@@ -108,6 +108,7 @@ header {
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+
 .arrow-up {
     width: 0; 
     height: 0; 
@@ -120,6 +121,7 @@ header {
 }
 
 /* Convenience classes - colors copied from Bootstrap */
+
 .arrow-primary {
     border-bottom-color: #007bff !important;
 }
@@ -250,15 +252,6 @@ header {
     text-align: center;
 }
 
-
-/* 404 page */
-
-.error_img {
-    width: 100%;
-    margin-bottom: 20px;
-    height: 400px;
-}
-
 .about_image {
     background: url('/media/horizontal_whiskey_img.jpg') no-repeat center;
     background-size: cover;
@@ -266,6 +259,14 @@ header {
     overflow: hidden;
     height: 50vh;
     z-index: -1;
+}
+
+/* 404 page */
+
+.error_img {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 400px;
 }
 
 .jumbotron {
