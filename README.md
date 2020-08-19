@@ -473,7 +473,7 @@ I carried out manual testing and documented any errors/random side-effects captu
 </p>
 </details>
 
-### Validaors
+### Validators
 
 #### Pep8
 I carried out [PEP8 testing]( http://pep8online.com/) to improve the readability and consistency of my Python code. Pep8 is installed on my [Gitpod](https://gitpod.io/) workspace, so i check it regularly for errors or warnings. They are usually only minor issue like; like a line being too long or having a trailing whitespace on a line. Sometimes i would use [PEP8 Online Testing]( http://pep8online.com/) as i find it easier to spot the errors on that site. Below is my pass result for pep8 
@@ -649,8 +649,12 @@ This page stacks on top of each other on smaller screen widths.
 </p>
 </details>
 
+### Shopping Cart / Profile / Order page / Checkout page / Authentication pages
+Since these pages are very much template forms and involve not much of customization i decided to upload a video showcasing the responsiveness of these pages instead of uploading several screengrab's.
 
+<a href="https://www.youtube.com/watch?v=7GutIKUibR8&feature=youtu.be"><img src="README/images/youtube.png" max-width="50%"></a>
 
+**Click the image or the link here [Youtube Video](https://www.youtube.com/watch?v=7GutIKUibR8&feature=youtu.be)**
 
 
 
