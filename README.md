@@ -656,6 +656,12 @@ Since these pages are very much template forms and involve not much of customiza
 
 **Click the image or the link here [Youtube Video](https://www.youtube.com/watch?v=7GutIKUibR8&feature=youtu.be)**
 
+## Testing on different browsers and devices
+matrix 
+ie 
+etc 
+
+
 ## Testing of User Stories 
 
 ### As a Shopper
@@ -806,6 +812,31 @@ And finally i can delete things like whiskey clubs, subscription plans, orders e
 </p>
 </details>
 
+
+
+## Further Testing 
+
+### Webhooks 
+
+i tested webhooks by checking if they were received on their server. 
+I removed the form.submit(); from the stripe_elements.js in order to replicate the instance of a user entering their card details, then clicking the complete order button, and then a user unknowingly or knowingly redirecting away before the form can be submitted and the user redirected to the checkout success page.
+what would happen in this situation without webhooks would be the consumer would pay for the order but Angel Share wouldn't recieve the order on their side to activate the subscription and deliver the whiskey. 
+
+<details>
+<summary>Webhook testing<strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/testing/images/stripe_js.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/testing/images/webhook_received.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/testing/images/order_processed.jpg" style="max-width:100%;"></a>
+</p>
+</details>
+
+### Access Denied
+I also tested accessing pages that require authentication while i am logged out and thankfully all those cases worked.  
 
 ## Credits
 
