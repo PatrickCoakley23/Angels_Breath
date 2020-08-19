@@ -576,27 +576,81 @@ To overcome this i implemented a media query and reduced the height of the image
 <details>
 <summary>Debug & Fix <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
-  <img height="350" src="README/testing/images/debug.png" style="max-width:100%;"></a>
-</p>
-<p align="center">
   <img height="350" src="README/testing/images/debug_resize.png" style="max-width:100%;"></a>
 </p>
+<p align="center">
+  <img height="350" src="README/testing/images/media_query_debug.png" style="max-width:100%;"></a>
+</p>
 </details>
-
-
 
 <details>
-<summary><strong>(Click dropdown for images)</strong></summary>
+<summary>Whiskey Selected Desktop <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
-  <img height="350" src="README/images/choose_your_hit.png" style="max-width:100%;"></a>
+  <img height="350" src="README/images/whiskey_description.png" style="max-width:100%;"></a>
 </p>
 <p align="center">
-  <img height="350" src="README/testing/images/choose_hit_ipad.png" style="max-width:100%;"></a>
+  <img height="350" src="README/images/tasting_notes.png" style="max-width:100%;"></a>
 </p>
 <p align="center">
-  <img height="350" src="README/testing/images/choose_hit_mobile.png" style="max-width:100%;"></a>
+  <img height="350" src="README/images/order_summary.png" style="max-width:100%;"></a>
 </p>
 </details>
+
+<details>
+<summary>Whiskey Selected Ipad <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/testing/images/whiskey_selected_ipad1.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/testing/images/whiskey_selected_ipad2.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+<details>
+<summary>Whiskey Selected Mobile <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/testing/images/whiskey_selected_mob1.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/testing/images/whiskey_selected_mob2.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/testing/images/media_query_debug.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+### How It Works Page 
+On smaller screen widths each step is stacked on top of each other. On medium screen widths each step takes up a third of the page
+<details>
+<summary>How it Works Responsiveness <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/how_it_works.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/testing/images/how_it_works_ipad.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/testing/images/how_it_works_mob.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+### 404 error
+This page stacks on top of each other on smaller screen widths. 
+<details>
+<summary>How it Works Responsiveness <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/testing/images/404_desktop.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/testing/images/404_ipad.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/testing/images/404_mob.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+
+
 
 
 
