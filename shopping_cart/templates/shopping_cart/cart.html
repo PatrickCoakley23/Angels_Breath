@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-
 <!--Shopping Cart-->
 <div class="container mb-2">
     <div class="row">
@@ -34,14 +33,15 @@
                             <img class="img-fluid rounded" src="{{ MEDIA_URL}}{{ item.club.image}}" alt="{{ item.club.name }}">
                         </td>
                         <td class="py-3">
-                            <p class="my-0"><strong><p>{{ item.club.name }}</p></strong></p>
+                            <p class="my-0">
+                                <strong>
+                            <p>{{ item.club.name }}</p></strong></p>
                             <p></p>
                         </td>
-                        
                         <td class="py-3">
                             <form class="form update-form" method="POST" action="{% url 'update_cart' item.club.id %}">
-                            {% csrf_token %}
-							    <select id="change_subscription" class="form-control" name="change_subscription">
+                                {% csrf_token %}
+                                <select id="change_subscription" class="form-control" name="change_subscription">
                                     {% for sub in item.all_subs %}
                                     {% if sub.name == item.subscription.name %}
                                     <option value="{{ item.subscription.id }}" selected> {{item.subscription.name}} </option>
@@ -105,16 +105,13 @@
     </div>
 </div>
 {% endblock %}
-
 {% block postloadjs %}
 <script type="text/javascript">
-     
-     // Update quantity on click
+    // Update quantity on click
     $('.update-sub').click(function(e) {
-        var form = $(this).prev('.update-form');
-        form.submit();
+       var form = $(this).prev('.update-form');
+       form.submit();
     })
-
+    
 </script>
-
 {% endblock %}

@@ -198,14 +198,20 @@ Tasting notes are also included to allow users evaluate in their own mind which 
 the first two sections just mentioned differ based on the whiskey selected. This whiskey package section however is the exact same for all three whiskey clubs. 
 This section just briefly explains the added extras aside from the bottle of whiskey the **Angel's Share** members receive each month;
 
-    - Flavour profiles and tasting notes for each bottle.
-    - Tutorial on how to recognise different whiskey blends.
-    - Whiskey Production Techniques
-    - Expert evaluations and commentary on bottles.
+- Flavour profiles and tasting notes for each bottle.
+- Tutorial on how to recognise different whiskey blends.
+- Whiskey Production Techniques
+- Expert evaluations and commentary on bottles.
 
 <summary>Whiskey Package <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
   <img height="350" src="README/images/whiskey_package.png" style="max-width:100%;"></a>
+</p>
+</details>  
+
+<summary>Tasting Notes <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/tasting_notes.png" style="max-width:100%;"></a>
 </p>
 </details>  
 
@@ -403,6 +409,16 @@ The card numbers you can user for:
 I implimented webhooks to make my payment system more secure. Stripe uses webhooks to notify your application when an event happens in your account. Webhooks are particularly useful for asynchronous events like when a customer’s bank confirms a payment, a customer disputes a charge, or a recurring payment succeeds.
 There a number of scenario's that can go wrong with a online purchase. Users could intentionally or accidentally close the browser window after the payment is confirmed but before the form is submitted to our backend.
 Stripe keeps track of what is happening on their side to update Angel's Share if an order has been paid for or not. 
+
+### Future Implimentation
+(Due to the tight deadline of 2 weeks to complete this project i was unable to impliment these features)
+
+- **Social Authentication** - some [reports](https://dougbelshaw.com/blog/2018/01/03/identity-on-the-web/#:~:text=We%20know%20that%20social%20sign,the%20traditional%20username%20%2F%20password%20combination.) claim 90% os users prefer social authetication over traditional methods of registration and log in. 
+A long with the benefit of increasing the number of signups, social authentication would also give us access to a goldmine which would help with marketing and R&D.
+
+- **Gifts** - I included a section on gift purchases in my wireframes but unfortunately i had to leave them out. Currently users must be logged in, to be able to purchase an order. Having a gift offering where customers could buy one off purchases would be key for the next phase of development. 
+
+- **Stripe Monthly Installments** - Currently users must pay for their subscription upfront. Allowing monthly installments would benefit the UX of Angel's Share. 
 
 
 ## Credits

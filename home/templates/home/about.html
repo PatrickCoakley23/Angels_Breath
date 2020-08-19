@@ -1,17 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-
-
+<!--About Page-->
 <div class="overlay"></div>
-<div class="about_image">
-</div>
-
+<!--Image at top of page-->
+<div class="about_image"></div>
+<!--Information Section-->
 <div class="container-fluid container-charcoal about-container">
     <div class="row">
         <div class="col-12 text-center mt-5">
             <h2>How Angel's Share Memberships Work</h2>
-            <h5>We Know Our Whiskey, You Drink Our Whiskey</h5>
+            <h5>Experience a Different Whiskey Each Month Before the Angel's Take it</h5>
         </div>
     </div>
     <div class="row text-center">
@@ -19,31 +18,33 @@
             <span><i class="fas fa-wine-bottle icon-block text-orange"></i></span>
             <h3 class="text-center text-orange">Choose Your Poison</h3>
             <p>We have three different clubs to choose from, Irish, Scotch and American Whiskey.
-            You must register account to join one of our clubs. Select the club which suits your taste. 
-            If you are feeling adventurous,you can join more than one club</p>
-        </div>  
-            <hr class="hr-d-none">
+                You must register account to join one of our clubs. Select the club which suits your taste. 
+                If you are feeling adventurous,you can join more than one club
+            </p>
+        </div>
+        <hr class="hr-d-none">
         <div class="col-12 col-md-4 my-3">
             <span><i class="far fa-calendar-alt icon-block text-orange"></i></span>
             <h3 class="text-center text-orange">Choose Your Hit</h3>
             <p>Choose between three different subscription plans; 3 months, 6 months and 12 months. 
-            There is a discount for those who sign up to the 1 year subscription.S</p>
-        </div>  
-            <hr class="hr-d-none">
+                There is a discount for those who sign up to the 1 year subscription.S
+            </p>
+        </div>
+        <hr class="hr-d-none">
         <div class="col-12 col-md-4 my-3">
             <span><i class="fas fa-glass-whiskey icon-block text-orange"></i></span>
             <h3 class="text-center text-orange">Savour Your Whiskey</h3>
             <p> Each month you'll receive a unique, expertly chosen bottle of whiskey.
-            This is the fun part of the club, where you build your collection and get accustomed to the different whiskey tastes.</p>
-        </div>  
+                This is the fun part of the club, where you build your collection and get accustomed to the different whiskey tastes.
+            </p>
+        </div>
     </div>
-   
     <div class="row button-center">
         <div class="col button-center mb-5">
-            <a href="{% url 'clubs' %}" class="btn btn btn-orange"><h5>Whiskey Clubs</h5></a>
+            <a href="{% url 'clubs' %}" class="btn btn btn-orange">
+                <h5>Whiskey Clubs</h5>
+            </a>
         </div>
-	</div>
-
-    
+    </div>
 </div>
 {% endblock %}
