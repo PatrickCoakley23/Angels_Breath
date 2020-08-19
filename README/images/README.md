@@ -438,7 +438,7 @@ A long with the benefit of increasing the number of signups, social authenticati
  Test driven development involves designing and developing tests for every small functionality of an application.n simple terms, test cases are created before code is written. The purpose of TDD is to make the code clearer, simple and bug-free.
  Although test driven development was necessary for this project, i did implement so tests Order form and on my Whiskey_club view. 
 
- ### Testing OrderForm
+### Testing OrderForm
 
  1. Test that only fields in the meta class are defined explicitly. 
     - This ensures that if someone changes the model in the future, the form won't display information we don't want it to. 
@@ -454,12 +454,154 @@ A long with the benefit of increasing the number of signups, social authenticati
 ### Testing Views 
 
 1. I then tested my whiskey_clubs view. This basically tests whether the view will return a successful HTTP response, and in our case it did. 
+
 <details>
 <summary>Testing Views<strong>(Click dropdown for images)</strong></summary>
 <p align="center">
   <img height="350" src="README/testing/images/automatic_testing_views.png" style="max-width:100%;"></a>
 </p>
 </details>
+
+## Manual Testing 
+Manual testing was the main form of testing i did to access the functionality, usability and responsiveness and data management of my full stack web application. Debugging was carried out on an ongoing basis throughout the development of the project. Whilst coding i would run my code in the browser and check for any bug issues and make changes and fixes on an ad hoc basis. Some of the debugging i carred out, is mentioned in the responsiveness sub section below.
+
+I carried out manual testing and documented any errors/random side-effects captured in the Chrome Developer Tools. I loaded the website several times, and forced browser refresh to try and catch any errors but thankfully there was none.
+<details>
+<summary>Dev Tool Testing<strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/testing/images/automatic_testing_views.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+### Validaors
+
+#### Pep8
+I carried out [PEP8 testing]( http://pep8online.com/) to improve the readability and consistency of my Python code. Pep8 is installed on my [Gitpod](https://gitpod.io/) workspace, so i check it regularly for errors or warnings. They are usually only minor issue like; like a line being too long or having a trailing whitespace on a line. Sometimes i would use [PEP8 Online Testing]( http://pep8online.com/) as i find it easier to spot the errors on that site. Below is my pass result for pep8 
+
+<details>
+<summary>Pep8 errors<strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/testing/images/pep_8_errors.png" style="max-width:100%;"></a>
+</p>
+</details>
+<details>
+<summary>Pep8 Pass<strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/testing/images/pep8-online.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+#### CSS Validators
+
+I tested the css code on W3C CSS Validator and passed. 
+
+<details>
+<summary>CSS Validator<strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/testing/images/css_validator.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+### Responsiveness
+I carried out extensive testing of the responsiveness of my website, by checking how the website rendered on different devices and on lower screen widths.
+I have showcased screngrabs of how the website pages rendered on desktop/laptop view, tablet and mobile view. 
+
+Testing in [Chrome Developer Tools]( https://developers.google.com/web/tools/chrome-devtools) was carried out on an ongoing basis to check the responsiveness and carried out debugging of issues.
+
+#### Homepage (Hero Image)
+I didn't have to change anything on the homepage to make it responsive, as it rendered well on Laptop/desktop tablet and mobile. Generally i implement a media query for smaller screen widths to centre the hero image. 
+The mobile display looks slightly different than the tablet and desktop view as the whiskey bottle is out of view, however I thought the mobile view, looked equally as good and appropriate for my website with only the whiskey glass on the hero image.
+
+<details>
+<summary>Homepage Responsiveness<strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/hero_image_readme.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/testing/images/hero_image_ipad.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/testing/images/hero_image_ipad.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+#### Choose Your Poison and Choose Your Hit 
+The Choose your poison and choose your hit pages have the same card deck layout. during development i had a bug issue where the items were't aligning in the card deck. 
+This is the sort of debugging that was carried out on an ad hoc basis. I would run the project, see it in the browser and make the necessary changes.
+Here i had to add display flex and other changes to the card body. 
+
+<details>
+<summary>Debug<strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/testing/images/debug.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+The only responsive changes i had to make for these two pages was a media query for max-width of 768px because up to that width the card decks took up an entire column and there needed to be a margin between the card decks otherwise they would be stacked on top of each other.
+Also at on any width above 768px i made the images within the card deck 20vw (viewport width) so they appeared larger on larger devices. 
+
+<details>
+<summary>Choose Your Hit<strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/choose_your_poison.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/testing/images/choose_poison_ipad.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/testing/images/choose_poison_mobile.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+<details>
+<summary>Choose Your Poison<strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/choose_your_hit.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/testing/images/choose_hit_ipad.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/testing/images/choose_hit_mobile.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+### Whiskey Selected Page
+This page was required the most styling in order for it to be responsive across all screen widths as it was a heavily customized page. 
+As you can see all the content is stacked above each other on lower screen widths and on medium screen widths and above the content and images are place next to each other. 
+
+i have also shown an example of the bug i fixed for the bottom container also. in the first image, the original bug its hard to read the content with the whiskey glass in the background.
+To overcome this i implemented a media query and reduced the height of the image and reduced the top margin on the content. 
+
+<details>
+<summary>Debug & Fix <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/testing/images/debug.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/testing/images/debug_resize.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+
+
+<details>
+<summary><strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/choose_your_hit.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/testing/images/choose_hit_ipad.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/testing/images/choose_hit_mobile.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+
+
+
+
 
 
 
