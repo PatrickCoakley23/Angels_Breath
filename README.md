@@ -187,8 +187,8 @@ This page is a very descriptive page on the whiskey selected by the user. This p
 </details>  
 
 Tasting notes are also included to allow users evaluate in their own mind which whiskey would best suit them based on their preferences or biases. 
-<details>
 
+<details>
 <summary>Tasting Notes <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
   <img height="350" src="README/images/tasting_notes.png" style="max-width:100%;"></a>
@@ -203,12 +203,14 @@ This section just briefly explains the added extras aside from the bottle of whi
 - Whiskey Production Techniques
 - Expert evaluations and commentary on bottles.
 
+<details>
 <summary>Whiskey Package <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
   <img height="350" src="README/images/whiskey_package.png" style="max-width:100%;"></a>
 </p>
 </details>  
 
+<details>
 <summary>Tasting Notes <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
   <img height="350" src="README/images/tasting_notes.png" style="max-width:100%;"></a>
@@ -219,6 +221,7 @@ This section just briefly explains the added extras aside from the bottle of whi
 ### Choose Your Hit
 This page has a similar layout to the 'Choose Your Poison' Page. This is the final step in the choosing the whiskey club you want to sign up to before it's added to the cart.
 
+<details>
 <summary>Choose Your Hit <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
   <img height="350" src="README/images/choose_your_hit.png" style="max-width:100%;"></a>
@@ -230,6 +233,7 @@ This page has a similar layout to the 'Choose Your Poison' Page. This is the fin
 Users may be skeptical or curious as to what the Angel's Share is or what it entails, and the 'How it Works' page is there to strengthen the message of what the Angel's Share is all about.
 This page uses icons and images to get the message across in a clear manner. The combination of images and icons also turns a regular mundane about page into an eye catching page.
 
+<details>
 <summary>How it Works <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
   <img height="350" src="README/images/how_it_works.png" style="max-width:100%;"></a>
@@ -246,6 +250,7 @@ I felt if i carried on with the same colour theme as i did for the whiskey pages
 These pages involve the user either inputting or receiving information which is key to the order transactions, 
 so i tried to keep the medium of passing information as neat as possible with no clutter. 
 
+<details>
 <summary>White and black design for information pages <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
   <img height="350" src="README/images/authentication.png" style="max-width:100%;"></a>
@@ -345,6 +350,7 @@ The navbar is the same across all sites so we only needed to create it once in t
 Create Read Update and Delete(CRUD)
 
 -**Create** Logged in Users can create an order for a club by choosing their whiskey club and subscription plan. 
+<details>
 <summary>Create<strong>(Click dropdown for images)</strong></summary>
 <p align="center">
   <img height="350" src="README/images/create_order.png" style="max-width:100%;"></a>
@@ -352,6 +358,7 @@ Create Read Update and Delete(CRUD)
 </details>
 
 -**Read** users can see what they have ordered in the cart, and can see their order history in their profile page. 
+<details>
 <summary>Read<strong>(Click dropdown for images)</strong></summary>
 <p align="center">
   <img height="350" src="README/images/cart.png" style="max-width:100%;"></a>
@@ -360,6 +367,7 @@ Create Read Update and Delete(CRUD)
 </details>
 
 -**Update** After adding subscription plans to their shopping cart, whilst in the shopping cart, users can change their subscription plan they are about to purchase by selecting the dropdown and pressing the update button. 
+<details>
  <summary>Update<strong>(Click dropdown for images)</strong></summary>
 <p align="center">
   <img height="350" src="README/images/update.jpg" style="max-width:100%;"></a>
@@ -367,7 +375,8 @@ Create Read Update and Delete(CRUD)
 </details>
 
 -**Delete** Similarly to the update function, whilst in the shopping cart, users can delete orders from their cart. 
- <summary>Delete<strong>(Click dropdown for images)</strong></summary>
+<details>
+<summary>Delete<strong>(Click dropdown for images)</strong></summary>
 <p align="center">
   <img height="350" src="README/images/delete.jpg" style="max-width:100%;"></a>
 </p>
@@ -376,11 +385,15 @@ Create Read Update and Delete(CRUD)
 ### Forms
 There are two forms on this website which are interlinked and allow users to create and edit models in the backend. Users can create a profile form and save the information which will pre populate the order information the next time they make an order. And on the reverse side, when a user is making an order, they can save the order information to update the profile model. 
 Users previous orders are also stored in their profile, so they can keep track of their subscriptions. 
- <summary>Profile<strong>(Click dropdown for images)</strong></summary>
+
+<details>
+<summary>Profile<strong>(Click dropdown for images)</strong></summary>
 <p align="center">
   <img height="350" src="README/images/profile_populated.jpg" style="max-width:100%;"></a>
 </p>
 </details>
+
+<details>
  <summary>Checkout<strong>(Click dropdown for images)</strong></summary>
 <p align="center">
   <img height="350" src="README/images/checkout_prepopulated.jpg" style="max-width:100%;"></a>
