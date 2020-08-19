@@ -838,6 +838,29 @@ what would happen in this situation without webhooks would be the consumer would
 ### Access Denied
 I also tested accessing pages that require authentication while i am logged out and thankfully all those cases worked.  
 
+## SCHEMA 
+<h2 align="center"><img src="README/images/logo_white_background.jpg" max-width="30%"></h2>
+In development i used the relational database [SQLite](https://www.sqlite.org/index.html) which is set up as default in Django. 
+
+Firstly within my Clubs app i have my two models Whiskey_Clubs and Subscription_type which have a many to many relationship, as a club can have many subscriptions and also a subscription may have many clubs. 
+The Subscriptions model is the through table which consists of the foreign keys to both the Whiskey_club and Subscription type. 
+
+This relationship allowed me to append these two objects together when after user selected their club and subscription.
+
+for club_id, club_details in cart.items():
+
+{'1':{'sub_id':4', 'quantity':1}} - so this is what gets added to the cart. Whiskey_club.id of 1 , sub_id of 4 and quantity of 1. I realized afterwards, that i could have left out the quantity
+as i always want it to be 1 as it makes no sense for a user to sign up to two of the same subscriptions. 
+
+---
+OrderModel and UserProfiles are related due to the UserProfile foreignkey within the OrderLineItem. This facilitates us checking the database to see if a user already has a subscription to that specific whiskey club before adding it to the cart. Because of the foreign key relationship it allows us to pre populate the forms 
+when the user clicks the save(info) button when checking out or when they click update details in the profile app. 
+
+    * When user clicks update information in the profiles app, this pre populates the delivery details in the order form when the user checks out. 
+    * When the user clicks save info when entering the delivery details in the checkout, this updates the information in the profiles form. 
+
+This is how the Angel's Share database is organised and how the relations among them are associated.
+
 ## Credits
 
 ### Media 
