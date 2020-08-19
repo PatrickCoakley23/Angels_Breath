@@ -158,13 +158,112 @@ The homepage sets up to be enticing while at the same time obvious to the user t
 <details>
 <summary>Homepage <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
-  <img height="350" src="README/images/hero_image_cta.jpg" style="max-width:100%;"></a>
+  <img height="350" src="README/images/hero_image_readme.jpg" style="max-width:100%;"></a>
 </p>
 </details>  
 
 ---
-### Whiskey Club Selected Page
-Once the user clicks the select button on the bottom of the card deck on the Whiskey Clubs page, they are brought to that specific whiskey's details page. This page details a brief description of the whiskey clubs origins and tasting notes. This page also lists what is included in the club package. The cta buttons brings the users to the subscriptions page where they choose the length of their club package. 
+### Whiskey Club Selected Page / Choose Your Poison
+Once the user clicks the select button on the bottom of the card deck on the Whiskey Clubs page, 
+they are brought to that specific whiskey's details page. 
+This page is the first step in the process in signing up to an 'Angel's Share' Whiskey Club. 
+The images were specifically chosen as they showcase some of the most famous whiskey brands from each club.
+<details>
+<summary>Choose Your Poison Page <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/choose_your_poison.png" style="max-width:100%;"></a>
+</p>
+</details>  
+
+---
+### Whiskey Selected Page
+This page is a very descriptive page on the whiskey selected by the user. This page explains the history, origins and distilling methods associated with that specific whiskey club. 
+
+<details>
+<summary>Whiskey Selected <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/whiskey_description.png" style="max-width:100%;"></a>
+</p>
+</details>  
+
+Tasting notes are also included to allow users evaluate in their own mind which whiskey would best suit them based on their preferences or biases. 
+<details>
+
+<summary>Tasting Notes <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/tasting_notes.png" style="max-width:100%;"></a>
+</p>
+</details>  
+
+the first two sections just mentioned differ based on the whiskey selected. This whiskey package section however is the exact same for all three whiskey clubs. 
+This section just briefly explains the added extras aside from the bottle of whiskey the **Angel's Share** members receive each month;
+
+    - Flavour profiles and tasting notes for each bottle.
+    - Tutorial on how to recognise different whiskey blends.
+    - Whiskey Production Techniques
+    - Expert evaluations and commentary on bottles.
+
+<summary>Whiskey Package <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/whiskey_package.png" style="max-width:100%;"></a>
+</p>
+</details>  
+
+---
+### Choose Your Hit
+This page has a similar layout to the 'Choose Your Poison' Page. This is the final step in the choosing the whiskey club you want to sign up to before it's added to the cart.
+
+<summary>Choose Your Hit <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/choose_your_hit.png" style="max-width:100%;"></a>
+</p>
+</details>  
+
+---
+### How It Works 
+Users may be skeptical or curious as to what the Angel's Share is or what it entails, and the 'How it Works' page is there to strengthen the message of what the Angel's Share is all about.
+This page uses icons and images to get the message across in a clear manner. The combination of images and icons also turns a regular mundane about page into an eye catching page.
+
+<summary>How it Works <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/how_it_works.png" style="max-width:100%;"></a>
+</p>
+</details>  
+
+---
+# Shopping Cart / Profile / Order page / Checkout page / Authentication pages
+for the Shopping Cart / Profile / Order page / Checkout page / Authentication pages i decided to keep a clean tidy design. 
+The background for all these pages are white and are paired with black font, borders and buttons. 
+
+I felt if i carried on with the same colour theme as i did for the whiskey pages, they may not be as easy to read as the clean white background. 
+
+These pages involve the user either inputting or receiving information which is key to the order transactions, 
+so i tried to keep the medium of passing information as neat as possible with no clutter. 
+
+<summary>White and black design for information pages<strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/authentication.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/images/cart.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/images/checkout.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/images/order_summary.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/images/profile.png" style="max-width:100%;"></a>
+</p>
+</details> 
+
+
+
+
+
+
+
 
 
 ## Credits

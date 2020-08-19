@@ -8,6 +8,10 @@ h1, h2, h3, h4, h5 {
     font-family: 'Montserrat', sans-serif;
 }
 
+.a-black {
+    color: black;
+}
+
 .text-orange {
     color: #ff9d37;
 }
@@ -16,7 +20,10 @@ h1, h2, h3, h4, h5 {
 
 header {
     background-color: #282828;
-    position: sticky;
+    /*position: sticky;
+    z-index: 1;
+    top: 0; */
+    width: 100%;
 }
 
 .navbar-nav .nav-link {
