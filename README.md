@@ -15,7 +15,7 @@ The Angel’s Share is perfect for people who have a keen interest in whiskey, o
 
     - As a Shopper 
 
-        - As a user I want to be able to view all the product’s/service’s available to purchase from the Angel’s Share. 
+        - As a user I want to be able to view all the product’s/service’s available to purchase from the Angel’s Share website. 
             - Choose Your Poison page – users have the option to select between the three whiskey clubs (Irish, Scottish and Bourbon Whiskey)
 
         - As a User I want to get more information on each whiskey club/product when I click on the relevant club. 
@@ -656,12 +656,155 @@ Since these pages are very much template forms and involve not much of customiza
 
 **Click the image or the link here [Youtube Video](https://www.youtube.com/watch?v=7GutIKUibR8&feature=youtu.be)**
 
+## Testing of User Stories 
+
+### As a Shopper
+
+1.  As a user I want to be able to view all the product’s/service’s available to purchase from the Angel’s Share website. 
+    * Once the user lands on the hompage they are greeted by the call to action button 'Whiskey Clubs' which brings them to the choose your poison page. 
+    Users see all the whiskey clubs available to subscribe to immediately. 
+
+<details>
+<summary>User story 1 <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/testing/images/user_story1.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+---
+
+2. As a User I want to get more information on each whiskey club/product when I click on the relevant club.
+    * On the 'Choose Your Poison' page, once the user selects the specific whiskey they are interested in, they are brought to the whiskey details page which gives a description on the origins of that specific type of whiskey, distilling methods, taste notes and a brief history. 
+
+<details>
+<summary>User Story 2 <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/testing/images/user_story2.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+---
+
+3. As a shopper I want to see the different price options for the various clubs.
+    * 'Choose your hit' section users can see the price of getting the Angel’s Drop package for 3/6 and 12 month subscriptions.
+
+<details>
+<summary>User Story 3 <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/testing/images/user_story3.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+---
 
 
+4. As a user I want to be able to see some sort of 'About page' as i never heard of a whiskey subscription club before. 
+    * 'How It Works' - this page's main purpose is to reaffirm the service Angel's Share is providing and what a simple process it is. 
+    This page uses icons and images to inform the user of the service in a fun imaginative way.
+
+<details>
+<summary>User Story 4 <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/testing/images/user_story4.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+---
 
 
+### As a Registerd User 
 
+5. As a user who wants to subscribe to one of the Angel’s Drops whiskey clubs, I would like to be able to register an account easily so I can checkout quicker and receive special offers.
 
+<details>
+<summary>User Story 5 <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/testing/images/user_story5.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+6. As a registered user I want to be able to login and logout quickly.
+
+<details>
+<summary>User Story 6 <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/testing/images/user_story6.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+Django-Allauth is the framework which handles the authorization for the Angel's Share website. The 'My Account' navbar item is available on every page on the website. The 'My Account' dropdown includes an if statement, which checks if the user is authenticated or not. If the user is logged in they will see whats in the image for user story 6. 
+If they are not logged in they will see the dropdown items; login and registration.
+
+---
+
+### Purchasing and Checkout
+
+7. As a user I want to be able to view my shopping bag once I have selected a product, so I can evaluate the details of my purchase and the total cost.
+    * thanks to the contexts.py page, the items that are added to the cart, are made available across the entire website. Once the user clicks the shopping cart icon, their cart details will appear in the shopping cart. 
+    * When the user adds an item to the cart, they are prompted with a toast notification showing the details of their cart. 
+
+<details>
+<summary>User Story 7 <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/create_order.jpg" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/images/cart.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+---
+
+8. As a user I want to easily enter my payment and shipping information and feel my transaction is safe and secure.
+    * Stripe handles all the payments, so users can feel safe and secure that their cards are being handled by a respected and secure payment provider. 
+
+<details>
+<summary>User Story 8 <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/stripe.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+---
+
+### Admin and Store Management
+
+9. As a website developer I want to be able to use the basic CRUD functionality to be able to add, edit and delete products/services on the website.
+
+I can Create Subscriptions / Whiskey Clubs 
+<details>
+<summary>User Story 9 **Create** <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/testing/images/add_admin.jpg" style="max-width:100%;"></a>
+</p>
+</details>
+
+I can read orders, see subscription, the whiskey club, userprofile, total etc
+<details>
+<summary>User Story 9 **Read** <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/testing/images/read_admin.jpg" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/testing/images/read_admin2.jpg" style="max-width:100%;"></a>
+</p>
+</details>
+
+I can edit objects in the admin. 
+<details>
+<summary>User Story 9 **Update** <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/testing/images/edit_admin.jpg" style="max-width:100%;"></a>
+</p>
+</details>
+
+And finally i can delete things like whiskey clubs, subscription plans, orders etc 
+<details>
+<summary>User Story 9 **Delete** <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/testing/images/delete_admin.jpg" style="max-width:100%;"></a>
+</p>
+</details>
 
 
 ## Credits
