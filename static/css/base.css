@@ -258,6 +258,7 @@ header {
     position: relative;
     overflow: hidden;
     height: 50vh;
+    z-index: -1;
 }
 
 .jumbotron {

@@ -58,6 +58,7 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_cart = json.dumps(cart)
             order.save()
+          
 
             for club_id, club_details in cart.items():
                 subscription_type = get_object_or_404(Subscription_type, pk=club_details['sub_id'])
@@ -70,7 +71,7 @@ def checkout(request):
                         user_profile=request.user.userprofile
                 )
                 order_line_item.save()
-                
+            
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
