@@ -273,6 +273,7 @@ so i tried to keep the medium of passing information as neat as possible with no
 ### 404 Page
 I created a customized error page incase a user gets a 404 message.
 
+<details>
 <summary>404 Page <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
   <img height="350" src="README/images/404_page.png" style="max-width:100%;"></a>
@@ -432,6 +433,35 @@ A long with the benefit of increasing the number of signups, social authenticati
 - **Gifts** - I included a section on gift purchases in my wireframes but unfortunately i had to leave them out. Currently users must be logged in, to be able to purchase an order. Having a gift offering where customers could buy one off purchases would be key for the next phase of development. 
 
 - **Stripe Monthly Installments** - Currently users must pay for their subscription upfront. Allowing monthly installments would benefit the UX of Angel's Share. 
+
+## TESTING 
+ Test driven development involves designing and developing tests for every small functionality of an application.n simple terms, test cases are created before code is written. The purpose of TDD is to make the code clearer, simple and bug-free.
+ Although test driven development was necessary for this project, i did implement so tests Order form and on my Whiskey_club view. 
+
+ ### Testing OrderForm
+
+ 1. Test that only fields in the meta class are defined explicitly. 
+    - This ensures that if someone changes the model in the future, the form won't display information we don't want it to. 
+
+ 2. I then tested to see if required feels are treated as valid when left blank. I submitted a blank field and self.assertFalse(form.is_valid()) so the form wont be valid.
+<details>
+<summary>Testing Forms<strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/testing/images/automatic_testing_forms.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+### Testing Views 
+
+1. I then tested my whiskey_clubs view. This basically tests whether the view will return a successful HTTP response, and in our case it did. 
+<details>
+<summary>Testing Views<strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/testing/images/automatic_testing_views.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+
 
 
 ## Credits
