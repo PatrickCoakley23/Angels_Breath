@@ -231,7 +231,7 @@ This page uses icons and images to get the message across in a clear manner. The
 </details>  
 
 ---
-# Shopping Cart / Profile / Order page / Checkout page / Authentication pages
+### Shopping Cart / Profile / Order page / Checkout page / Authentication pages
 for the Shopping Cart / Profile / Order page / Checkout page / Authentication pages i decided to keep a clean tidy design. 
 The background for all these pages are white and are paired with black font, borders and buttons. 
 
@@ -240,7 +240,7 @@ I felt if i carried on with the same colour theme as i did for the whiskey pages
 These pages involve the user either inputting or receiving information which is key to the order transactions, 
 so i tried to keep the medium of passing information as neat as possible with no clutter. 
 
-<summary>White and black design for information pages<strong>(Click dropdown for images)</strong></summary>
+<summary>White and black design for information pages <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
   <img height="350" src="README/images/authentication.png" style="max-width:100%;"></a>
 </p>
@@ -258,12 +258,151 @@ so i tried to keep the medium of passing information as neat as possible with no
 </p>
 </details> 
 
+---
+### 404 Page
+I created a customized error page incase a user gets a 404 message.
+
+<summary>404 Page <strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/404_page.png" style="max-width:100%;"></a>
+</p>
+</details>  
+
+---
+### Base Template 
+The base.html contains the basic layout which is common to all the other templates, and it is from this base template that we extend the layout for other pages.
+We modify the parent template(base.html) using the child templates (e.g the pages listed above). The {% extend base.html %} must be the first tag in the child templates. This tag tells the template engine that this template extends from the parent template or ( base.html ).
+
+We then use Template inheritance eg. 
+
+    {% block content %}
+    {& endblock %}
+
+To override the base.html page and add our custom code to the child elements. 
+
+The Base.Html page in this website contains all the relevant links to our bootstrap framework, font awesome, css files, Jquery and other relevant meta tags. The Base.html also sets the template for the navbar and flash messages used throughout the website and the reoccurring css styles like font, colour, background colour etc. 
+
+The navbar is the same across all sites so we only needed to create it once in the base template, and that meant it was made available across the site. 
+
+---
+## TECHNOLOGIES
+
+### Languages Used 
+
+1. [HTML5]( https://en.wikipedia.org/wiki/HTML5) - is the standard markup language for documents designed to be displayed in a web browser.
+2. [CSS3]( https://en.wikipedia.org/wiki/Cascading_Style_Sheets) - Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language like HTML.
+3. [Python]( https://www.python.org/) - Python is an interpreted, high-level, general-purpose programming language.
+4. [Javascript/Jquery]( https://en.wikipedia.org/wiki/JavaScript) - JavaScript is among the most powerful and flexible programming languages of the web. It powers the dynamic behavior on most websites.
+
+ ### Frameworks, Libraries & Programs Used 
 
 
+1. [Bootstrap 4.4.1:]( https://getbootstrap.com/docs/4.4/getting-started/introduction/)
+    - Bootstrap was used to assist with the responsiveness and styling of the website.</li>
 
+2. [Django]( https://www.djangoproject.com/) - Django is a Python-based free and open-source web framework that follows the model-view-controller architectural pattern.
+    - Django helped reduced the web application development time. Django allowed me to build custom web applications and also reuse applications i used previously.
 
+3. [SQLite]( https://www.sqlite.org/index.html)
+    - SQLite was the database i used in development. By default, Django automatically creates a SQLite database for your project. SQLite is a relational database management system
 
+4. [Google Fonts:]( https://fonts.google.com/)
+    - Google fonts were used to import the 'Oswald' font and the 'Open Sans' font into the style.css file which is used on all pages throughout the website.
 
+5. [Font Awesome:]( https://fontawesome.com/)
+    - Font Awesome was used on throughout the website to add icons for aesthetic and UX purposes.
+
+6.  [Git]( https://git-scm.com/)
+    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+
+7. [GitHub:]( https://github.com/)
+    - GitHub is used to store the projects code after being pushed from Git.
+
+8. [Balsamiq:]( https://balsamiq.com/)
+    - Balsamiq was used to create the wireframes during the design process.
+
+9. [PEP8]( http://pep8online.com/)
+    - Python style guide checker. PEP8 is a tool to check your Python code against some of the style conventions in PEP 8.
+
+10. [Heroku]( www.heroku.com)
+    - Heroku is a cloud platform which was used to host my website.
+
+11. [The W3C Markup Validator]( https://validator.w3.org/) and [W3C CSS Validator Services]( https://jigsaw.w3.org/css-validator/) 
+    - Used to validate the HTML and CSS of the project to ensure there were no syntax errors in the project.
+
+12. [PostgreSQL](https://www.postgresql.org/) - PostgreSQL, also known as Postgres, is a free and open-source relational database management system. 
+    - Postgres was the databased that was used when my site was hosted on Heroku.
+
+## FEATURES
+
+### CRUD Functionality
+Create Read Update and Delete(CRUD)
+
+-**Create** Logged in Users can create an order for a club by choosing their whiskey club and subscription plan. 
+<summary>Create<strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/create_order.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+-**Read** users can see what they have ordered in the cart, and can see their order history in their profile page. 
+<summary>Read<strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/cart.png" style="max-width:100%;"></a>
+  <img height="350" src="README/images/profile.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+-**Update** After adding subscription plans to their shopping cart, whilst in the shopping cart, users can change their subscription plan they are about to purchase by selecting the dropdown and pressing the update button. 
+ <summary>Update<strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/update.jpg" style="max-width:100%;"></a>
+</p>
+</details>
+
+-**Delete** Similarly to the update function, whilst in the shopping cart, users can delete orders from their cart. 
+ <summary>Delete<strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/delete.jpg" style="max-width:100%;"></a>
+</p>
+</details>
+
+### Forms
+There are two forms on this website which are interlinked and allow users to create and edit models in the backend. Users can create a profile form and save the information which will pre populate the order information the next time they make an order. And on the reverse side, when a user is making an order, they can save the order information to update the profile model. 
+Users previous orders are also stored in their profile, so they can keep track of their subscriptions. 
+ <summary>Profile<strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/profile_populated.jpg" style="max-width:100%;"></a>
+</p>
+</details>
+ <summary>Checkout<strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/checkout_prepopulated.jpg" style="max-width:100%;"></a>
+</p>
+</details>
+
+### Authentication
+Authentication is a very quick set up thanks to the out of the box app [Django-allauth]( https://django-allauth.readthedocs.io/en/latest/installation.html).
+It is an integrated set of Django applications addressing authentication, registration, account management as well as 3rd party (social) account authentication. In simple terms, it is a combination of simple login and registration along with social authentication system.
+Django-Allauth is the most popular Django package used for Authentication purposes. 
+
+You can stick to their pre-defined templates or customize them to your liking. For this project i modified the all-auth templates slightly by downloading [Bootstrap's]( https://getbootstrap.com/) crispy forms. Allauth handles all the issues surrounding forgotten passwords, email confirmations etc.
+
+Authentication was a major requirement for my website as users must be registered a logged in, in order to sign up to a subscription. 
+
+### Stripe APi 
+I used [Stripe's](www.stripe.com) API to handle the purchases for my ecommerce site. This payment system is only a test system so you'll need to use one of these test cards available [here]( https://stripe.com/docs/testing#cards)
+
+The card numbers you can user for:
+    - No authentication (default U.S. card): 4242 4242 4242 4242.
+    - Authentication required: 4000 0027 6000 3184.
+
+<h2 align="center"><img src="README/images/stripe.png" max-width="30%"></h2>
+
+#### Stripe Webhooks
+I implimented webhooks to make my payment system more secure. Stripe uses webhooks to notify your application when an event happens in your account. Webhooks are particularly useful for asynchronous events like when a customer’s bank confirms a payment, a customer disputes a charge, or a recurring payment succeeds.
+There a number of scenario's that can go wrong with a online purchase. Users could intentionally or accidentally close the browser window after the payment is confirmed but before the form is submitted to our backend.
+Stripe keeps track of what is happening on their side to update Angel's Share if an order has been paid for or not. 
 
 
 ## Credits
