@@ -4,10 +4,10 @@ As part of my Milestone 4 project with [Code Institute]( https://codeinstitute.n
 
 I decided to build a whiskey subscription service called the **Angel's Share**. The name for the brand was chosen after the Angel’s take their cut from every barrel of distilled spirits. In the simplest of terms, the Angel’s Share is the amount of distilled spirits lost to evaporation from the barrel or cask into the air as the whiskey ages.  
 
-The Angel’s Share website, provides three whiskey club subscriptions to choose from: Irish Whiskey, Scottish Whiskey and American Bourbon. Club members can choose between a 3 month, 6 month or a 12 month subscription, with a different bottle of whiskey being delivered each month. 
+The Angel’s Share website, provides three whiskey club subscriptions to choose from: Irish Whiskey, Scottish Whisky and American Whiskey. Club members can choose between a 3 month, 6 month or a 12 month subscription, with a different bottle of whiskey being delivered each month. 
 The various types of whiskey’s selected by the Angel’s Share, range from classic whiskeys everybody is familiar with, to craft specials that are provided exclusively to the Angel’s Share from the distiller. 
 
-The Angel’s Share is perfect for people who have a keen interest in whiskey, or those who want to get started in building a whiskey collection. The Angel’s Share is also a perfect gift option.
+The Angel’s Share is perfect for people who have a keen interest in whiskey, or those who want to get started in building a whiskey collection. 
 
 ## **User Experience (UX)**
 
@@ -24,22 +24,19 @@ The Angel’s Share is perfect for people who have a keen interest in whiskey, o
         - As a shopper I want to see the different price options for the various clubs. 
             - ‘Choose your hit’ section users can see the price of getting the Angel’s Drop package for 3/6 and 12 month subscriptions. 
 
-        - As a user I want to be able to see an ‘About Page’, so I can understand the type of company the Angel’s Breath is. 
-            - Reason for About page.
+        - As a user I want to be able to see an ‘About Page’, so I can understand the how the service and membership works. 
+            - Reason for 'How it Works Page'
 
     - Registration 
         
-        - As a user who wants to subscribe to one of the Angel’s Drops whiskey clubs, I would like to be able to register an account easily so I can checkout quicker and receive special offers. 
+        - As a user who wants to subscribe to one of the Angel’s Share whiskey clubs, I would like to be able to register an account easily so I can checkout quicker and receive special offers. 
             - Reason for login/registration. 
 
         - As a registered user I want to be able to login and logout quickly. 
 
-        - As a one-time user I want to be able to make a once off purchase without signing up. 
-            - If purchasing the whiskey subscription as a gift, user’s don’t need to sign up. 
-
     - Purchasing & Checkout 
         
-        - As a user I want to be able to view my shopping bag once I have selected a product, so I can evaluate the details of my purchase and the total cost. 
+        - As a user I want to be able to view my shopping bag once I have selected a subscription, so I can evaluate the details of my purchase and the total cost. 
             - Reason for the shopping bag. 
 
         - As a user I want to easily enter my payment and shipping information and feel my transaction is safe and secure.
@@ -117,28 +114,18 @@ I used Bootstrap 4 to build the framework of the website. Bootstrap was the main
 
 - **Black** - Black is the dominant colour throughout this website. Black is elegant, sophisticated and it implies a premium brand. The black background gives prominence to the content on the site. I thought the colour black fitted well within the alcohol and whiskey industry in portraying the Angel's Share as a premium brand. 
 
-- **White** - On some of the pages there is a white background as opposed to the dominant black. The reason being i wanted to go for a clean look that doesn't distract the user from the call to action, be it login/registration or selcting the specific whiskey club or subscription. 
+- **White** - On some of the pages there is a white background as opposed to the dominant black. The reason being i wanted to go for a clean look that doesn't distract the user from the call to action, be it login/registration, shopping cart details or entering card and shipping details.
 
-- **Dark Green** - Dark green was used mostly in the headings and borders of this site. I felt it contrasted well to stand out and green is assoicated with the celtic origins whiskey. 
+- **Light Orange** - The light orange colour is consistently used across the website's call to action buttons. This shade of orange is similar to the amber colour of whiskey. This colour is used on most of the whiskey pages call to action buttons as it pairs well with the black background.
 
-- **Light Orange** - The light orange colour is consistently used across the website's call to action buttons. This shade of orange is similar to the amber colour of whiskey. 
-
-#### List of the other colours used throughout the website: 
-
-- #232323 - (Charcoal) 
-
-- #6c757d (Navy Grey) 
-
-- #aab7c4 (Light Grey)
-
-- #17a268 (turquoise)
+There are other colours used on the site but they are used for minor style touches. 
 
 ### Typography
 The “Montserrat” font is the font used for all the headings and the “Lato” font is the font used for the body of the website. Sans serif is set as the fallback font in case for any reason the font isn't being imported into the site correctly.
 
 ### Imagery
 Imagery is a reoccurring theme throughout the website. I felt images played a vital role in influencing a users decision in the alcohol industry. 
-The Hero image especially works well in drawing the user in and given the website a very modern feel.
+The Hero image especially works well in drawing the user in, and given the website a very modern feel.
 
 ### Logo 
 I created the logo on [Tailor Brands]( https://www.tailorbrands.com/). Although it is a paid service i feel the level of detail and quality of the template they use is worth it. I felt the image is clean, elegant and is positioned well within the whiskey market.  
@@ -195,7 +182,7 @@ Tasting notes are also included to allow users evaluate in their own mind which 
 </p>
 </details>  
 
-the first two sections just mentioned differ based on the whiskey selected. This whiskey package section however is the exact same for all three whiskey clubs. 
+The first two sections just mentioned differ based on the whiskey selected. This whiskey package section however is the exact same for all three whiskey clubs. 
 This section just briefly explains the added extras aside from the bottle of whiskey the **Angel's Share** members receive each month;
 
 - Flavour profiles and tasting notes for each bottle.
@@ -207,13 +194,6 @@ This section just briefly explains the added extras aside from the bottle of whi
 <summary>Whiskey Package <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
   <img height="350" src="README/images/whiskey_package.png" style="max-width:100%;"></a>
-</p>
-</details>  
-
-<details>
-<summary>Tasting Notes <strong>(Click dropdown for images)</strong></summary>
-<p align="center">
-  <img height="350" src="README/images/tasting_notes.png" style="max-width:100%;"></a>
 </p>
 </details>  
 
@@ -230,7 +210,7 @@ This page has a similar layout to the 'Choose Your Poison' Page. This is the fin
 
 ---
 ### How It Works 
-Users may be skeptical or curious as to what the Angel's Share is or what it entails, and the 'How it Works' page is there to strengthen the message of what the Angel's Share is all about.
+Users may be skeptical or curious as to what the Angel's Share is or what it entails. The 'How it Works' page is there to strengthen the message of what the Angel's Share is all about.
 This page uses icons and images to get the message across in a clear manner. The combination of images and icons also turns a regular mundane about page into an eye catching page.
 
 <details>
@@ -243,9 +223,9 @@ This page uses icons and images to get the message across in a clear manner. The
 ---
 ### Shopping Cart / Profile / Order page / Checkout page / Authentication pages
 for the Shopping Cart / Profile / Order page / Checkout page / Authentication pages i decided to keep a clean tidy design. 
-The background for all these pages are white and are paired with black font, borders and buttons. 
+The background for all these pages is white and is paired with black font, borders and buttons. 
 
-I felt if i carried on with the same colour theme as i did for the whiskey pages, they may not be as easy to read as the clean white background. 
+I felt if i carried on with the same colour theme as i did for the whiskey pages, it may not be as easy to read as the clean white background. 
 
 These pages involve the user either inputting or receiving information which is key to the order transactions, 
 so i tried to keep the medium of passing information as neat as possible with no clutter. 
@@ -345,20 +325,25 @@ The navbar is the same across all sites so we only needed to create it once in t
 12. [PostgreSQL](https://www.postgresql.org/) - PostgreSQL, also known as Postgres, is a free and open-source relational database management system. 
     - Postgres was the databased that was used when my site was hosted on Heroku.
 
+13. [Stripe](https://stripe.com/ie?utm_campaign=paid_brand-IE_en_Search_Brand_Stripe-1615558792&utm_medium=cpc&utm_source=google&ad_content=307359047688&utm_term=stripe&utm_matchtype=e&utm_adposition=&utm_device=c&gclid=Cj0KCQjwvvj5BRDkARIsAGD9vlJGQ9ppJLi4-XT1JXNiZubmSEW391kWMZ-nFpVjnAoj5YOItL7_amEaAm0EEALw_wcB)
+    - as payment platform to validate and accept credit card payments securely.
+
+14. [AWS S3 BUCKET](https://aws.amazon.com/s3/) - to store images and static files entered into the database.
+
 ## FEATURES
 
 ### CRUD Functionality
 Create Read Update and Delete(CRUD)
 
--**Create** Logged in Users can create an order for a club by choosing their whiskey club and subscription plan. 
+- **Create** Logged in Users can create an order for a club by choosing their whiskey club and subscription plan. 
 <details>
 <summary>Create<strong>(Click dropdown for images)</strong></summary>
 <p align="center">
-  <img height="350" src="README/images/create_order.png" style="max-width:100%;"></a>
+  <img height="350" src="README/images/create_order.jpg" style="max-width:100%;"></a>
 </p>
 </details>
 
--**Read** users can see what they have ordered in the cart, and can see their order history in their profile page. 
+- **Read** users can see what they have ordered in the cart, and can see their order history in their profile page. 
 <details>
 <summary>Read<strong>(Click dropdown for images)</strong></summary>
 <p align="center">
@@ -367,7 +352,7 @@ Create Read Update and Delete(CRUD)
 </p>
 </details>
 
--**Update** After adding subscription plans to their shopping cart, whilst in the shopping cart, users can change their subscription plan they are about to purchase by selecting the dropdown and pressing the update button. 
+- **Update** After adding subscription plans to their shopping cart, whilst in the shopping cart, users can change their subscription plan they are about to purchase by selecting the dropdown and pressing the update button. 
 <details>
  <summary>Update<strong>(Click dropdown for images)</strong></summary>
 <p align="center">
@@ -375,7 +360,7 @@ Create Read Update and Delete(CRUD)
 </p>
 </details>
 
--**Delete** Similarly to the update function, whilst in the shopping cart, users can delete orders from their cart. 
+- **Delete** Similarly to the update function, whilst in the shopping cart, users can delete orders from their cart. 
 <details>
 <summary>Delete<strong>(Click dropdown for images)</strong></summary>
 <p align="center">
@@ -408,7 +393,7 @@ Django-Allauth is the most popular Django package used for Authentication purpos
 
 You can stick to their pre-defined templates or customize them to your liking. For this project i modified the all-auth templates slightly by downloading [Bootstrap's]( https://getbootstrap.com/) crispy forms. Allauth handles all the issues surrounding forgotten passwords, email confirmations etc.
 
-Authentication was a major requirement for my website as users must be registered a logged in, in order to sign up to a subscription. 
+Authentication was a major requirement for my website as users must be registered and logged in, in order to sign up to a subscription. 
 
 ### Stripe APi 
 I used [Stripe's](www.stripe.com) API to handle the purchases for my ecommerce site. This payment system is only a test system so you'll need to use one of these test cards available [here]( https://stripe.com/docs/testing#cards)
