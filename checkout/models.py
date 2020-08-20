@@ -66,7 +66,7 @@ class OrderLineItem(models.Model):
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
                                      null=True, blank=True)
 
-    
+
     def save(self, *args, **kwargs):
         """
         Override the original save method to set the lineitem total
@@ -74,8 +74,6 @@ class OrderLineItem(models.Model):
         """
         self.lineitem_total = self.subscription_type.price * self.quantity
         super().save(*args, **kwargs)
-        
+
     def __str__(self):
         return f'{self.whiskey_club.name} for {self.subscription_type.name} on order {self.order.order_number}'
-
-        

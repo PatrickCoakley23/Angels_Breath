@@ -21,7 +21,8 @@ class Whiskey_club(models.Model):
 class Subscription_type(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField()
-    price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    price = models.DecimalField(max_digits=6, decimal_places=2,
+                                null=True, blank=True)
     whiskey_clubs = models.ManyToManyField(
         Whiskey_club,
         through='Subscriptions',
@@ -37,7 +38,9 @@ class Subscriptions(models.Model):
     class Meta:
         verbose_name_plural = "Subscriptions"
 
-    user_profile = models.ForeignKey(UserProfile, on_delete=models.CASCADE, null=True)
+    user_profile = models.ForeignKey(UserProfile,
+                                     on_delete=models.CASCADE,
+                                     null=True)
     whiskey_club = models.ForeignKey(Whiskey_club, on_delete=models.CASCADE,
                                      related_name="club_subs")
     subscription_type = models.ForeignKey(Subscription_type,

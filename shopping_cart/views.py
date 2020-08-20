@@ -39,7 +39,7 @@ def add_to_cart(request, sub_id, club_id):
     )
     if existing_subs:
         messages.error(request,
-                       f"You've already got a subscription to {club.name}"
+                       f"You've already got a subscription to {club.name} "
                        "on our database!")
         return redirect(reverse('clubs'))
 

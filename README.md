@@ -48,8 +48,8 @@ The Angel’s Share is perfect for people who have a keen interest in whiskey, o
 
 -   ### **WIREFRAMES**
 
-After reading the project brief i formulated a idea and jotted down notes and rough sketches on pen and paper. These ideas evolved into creating user stories which helped me formulate a plan to draw up some wireframes.
-I used [Balsamic](https://balsamiq.com/) to build the wireframes. I created mockups for desktop, tablet and mobile viewports, so i could have an idea of what my website would look like, and i could follow a plan to avoid scope creep.
+After reading the project brief I formulated a idea and jotted down notes and rough sketches on pen and paper. These ideas evolved into creating user stories which helped me formulate a plan to draw up some wireframes.
+I used [Balsamiq](https://balsamiq.com/) to build the wireframe's. I created mockups for desktop, tablet and mobile view ports, so I could have an idea of what my website would look like, and I could follow a plan to avoid scope creep.
 
 <details>
 <summary>Desktop Wireframes <strong>(Click dropdown for images)</strong></summary>
@@ -114,7 +114,7 @@ I used Bootstrap 4 to build the framework of the website. Bootstrap was the main
 
 - **Black** - Black is the dominant colour throughout this website. Black is elegant, sophisticated and it implies a premium brand. The black background gives prominence to the content on the site. I thought the colour black fitted well within the alcohol and whiskey industry in portraying the Angel's Share as a premium brand. 
 
-- **White** - On some of the pages there is a white background as opposed to the dominant black. The reason being i wanted to go for a clean look that doesn't distract the user from the call to action, be it login/registration, shopping cart details or entering card and shipping details.
+- **White** - On some of the pages there is a white background as opposed to the dominant black. The reason being, I wanted to go for a clean look that doesn't distract the user from the call to action, be it login/registration, shopping cart details or entering card and shipping details.
 
 - **Light Orange** - The light orange colour is consistently used across the website's call to action buttons. This shade of orange is similar to the amber colour of whiskey. This colour is used on most of the whiskey pages call to action buttons as it pairs well with the black background.
 
@@ -128,7 +128,7 @@ Imagery is a reoccurring theme throughout the website. I felt images played a vi
 The Hero image especially works well in drawing the user in, and given the website a very modern feel.
 
 ### Logo 
-I created the logo on [Tailor Brands]( https://www.tailorbrands.com/). Although it is a paid service i feel the level of detail and quality of the template they use is worth it. I felt the image is clean, elegant and is positioned well within the whiskey market.  
+I created the logo on [Tailor Brands]( https://www.tailorbrands.com/). Although it is a paid service I feel the level of detail and quality of the template they use is worth it. I felt the image is clean, elegant and is positioned well within the whiskey market.  
 <h2 align="center"><img src="README/images/logo_white_background.jpg" max-width="30%"></h2>
 
 
@@ -222,13 +222,13 @@ This page uses icons and images to get the message across in a clear manner. The
 
 ---
 ### Shopping Cart / Profile / Order page / Checkout page / Authentication pages
-for the Shopping Cart / Profile / Order page / Checkout page / Authentication pages i decided to keep a clean tidy design. 
+for the Shopping Cart / Profile / Order page / Checkout page / Authentication pages I decided to keep a clean tidy design. 
 The background for all these pages is white and is paired with black font, borders and buttons. 
 
-I felt if i carried on with the same colour theme as i did for the whiskey pages, it may not be as easy to read as the clean white background. 
+I felt if I carried on with the same colour theme as I did for the whiskey pages, it may not be as easy to read as the clean white background. 
 
 These pages involve the user either inputting or receiving information which is key to the order transactions, 
-so i tried to keep the medium of passing information as neat as possible with no clutter. 
+so I tried to keep the medium of passing information as neat as possible with no clutter. 
 
 <details>
 <summary>White and black design for information pages <strong>(Click dropdown for images)</strong></summary>
@@ -293,10 +293,10 @@ The navbar is the same across all sites so we only needed to create it once in t
     - Bootstrap was used to assist with the responsiveness and styling of the website.</li>
 
 2. [Django]( https://www.djangoproject.com/) - Django is a Python-based free and open-source web framework that follows the model-view-controller architectural pattern.
-    - Django helped reduced the web application development time. Django allowed me to build custom web applications and also reuse applications i used previously.
+    - Django helped reduced the web application development time. Django allowed me to build custom web applications and also reuse applications I used previously.
 
 3. [SQLite]( https://www.sqlite.org/index.html)
-    - SQLite was the database i used in development. By default, Django automatically creates a SQLite database for your project. SQLite is a relational database management system
+    - SQLite was the database I used in development. By default, Django automatically creates a SQLite database for your project. SQLite is a relational database management system
 
 4. [Google Fonts:]( https://fonts.google.com/)
     - Google fonts were used to import the 'Oswald' font and the 'Open Sans' font into the style.css file which is used on all pages throughout the website.
@@ -352,7 +352,7 @@ Create Read Update and Delete(CRUD)
 </p>
 </details>
 
-- **Update** After adding subscription plans to their shopping cart, whilst in the shopping cart, users can change their subscription plan they are about to purchase by selecting the dropdown and pressing the update button. 
+- **Update** After adding subscription plans to their shopping cart, whilst in the shopping cart, users can update the subscription plan they are about to purchase by selecting the dropdown and pressing the update button. 
 <details>
  <summary>Update<strong>(Click dropdown for images)</strong></summary>
 <p align="center">
@@ -391,7 +391,7 @@ Authentication is a very quick set up thanks to the out of the box app [Django-a
 It is an integrated set of Django applications addressing authentication, registration, account management as well as 3rd party (social) account authentication. In simple terms, it is a combination of simple login and registration along with social authentication system.
 Django-Allauth is the most popular Django package used for Authentication purposes. 
 
-You can stick to their pre-defined templates or customize them to your liking. For this project i modified the all-auth templates slightly by downloading [Bootstrap's]( https://getbootstrap.com/) crispy forms. Allauth handles all the issues surrounding forgotten passwords, email confirmations etc.
+You can stick to their pre-defined templates or customize them to your liking. For this project I modified the all-auth templates slightly by downloading [Bootstrap's]( https://getbootstrap.com/) crispy forms. Allauth handles all the issues surrounding forgotten passwords, email confirmations etc.
 
 Authentication was a major requirement for my website as users must be registered and logged in, in order to sign up to a subscription. 
 
@@ -405,23 +405,25 @@ The card numbers you can user for:
 <h2 align="center"><img src="README/images/stripe.png" max-width="30%"></h2>
 
 #### Stripe Webhooks
-I implimented webhooks to make my payment system more secure. Stripe uses webhooks to notify your application when an event happens in your account. Webhooks are particularly useful for asynchronous events like when a customer’s bank confirms a payment, a customer disputes a charge, or a recurring payment succeeds.
+I implemented webhooks to make my payment system more secure. Stripe uses webhooks to notify your application when an event happens in your account. Webhooks are particularly useful for asynchronous events like when a customer’s bank confirms a payment, a customer disputes a charge, or a recurring payment succeeds.
 There a number of scenario's that can go wrong with a online purchase. Users could intentionally or accidentally close the browser window after the payment is confirmed but before the form is submitted to our backend.
 Stripe keeps track of what is happening on their side to update Angel's Share if an order has been paid for or not. 
 
 ### Future Implimentation
-(Due to the tight deadline of 2 weeks to complete this project i was unable to impliment these features)
+(Due to the tight deadline of 2 weeks to complete this project I was unable to impliment these features)
 
 - **Social Authentication** - some [reports](https://dougbelshaw.com/blog/2018/01/03/identity-on-the-web/#:~:text=We%20know%20that%20social%20sign,the%20traditional%20username%20%2F%20password%20combination.) claim 90% os users prefer social authetication over traditional methods of registration and log in. 
 A long with the benefit of increasing the number of signups, social authentication would also give us access to a goldmine which would help with marketing and R&D.
 
-- **Gifts** - I included a section on gift purchases in my wireframes but unfortunately i had to leave them out. Currently users must be logged in, to be able to purchase an order. Having a gift offering where customers could buy one off purchases would be key for the next phase of development. 
+- **Gifts** - I included a section on gift purchases in my wireframes but unfortunately I had to leave them out. Currently users must be logged in, to be able to purchase an order. Having a gift offering where customers could buy one off purchases would be key for the next phase of development. 
 
 - **Stripe Monthly Installments** - Currently users must pay for their subscription upfront. Allowing monthly installments would benefit the UX of Angel's Share. 
 
+- **Blog Posts** - allowed signed up members to have their own social community and share their experiences of the whiskey they have tried. 
+
 ## TESTING 
  Test driven development involves designing and developing tests for every small functionality of an application.n simple terms, test cases are created before code is written. The purpose of TDD is to make the code clearer, simple and bug-free.
- Although test driven development was necessary for this project, i did implement so tests Order form and on my Whiskey_club view. 
+ Although test driven development was necessary for this project, I did implement so tests Order form and on my Whiskey_club view. 
 
 ### Testing OrderForm
 
@@ -448,13 +450,13 @@ A long with the benefit of increasing the number of signups, social authenticati
 </details>
 
 ## Manual Testing 
-Manual testing was the main form of testing i did to access the functionality, usability and responsiveness and data management of my full stack web application. Debugging was carried out on an ongoing basis throughout the development of the project. Whilst coding i would run my code in the browser and check for any bug issues and make changes and fixes on an ad hoc basis. Some of the debugging i carred out, is mentioned in the responsiveness sub section below.
+Manual testing was the main form of testing I did to access the functionality, usability and responsiveness and data management of my full stack web application. Debugging was carried out on an ongoing basis throughout the development of the project. Whilst coding I would run my code in the browser and check for any bug issues and make changes and fixes on an ad hoc basis. Some of the debugging I carred out, is mentioned in the responsiveness sub section below.
 
 I carried out manual testing and documented any errors/random side-effects captured in the Chrome Developer Tools. I loaded the website several times, and forced browser refresh to try and catch any errors but thankfully there was none.
 <details>
 <summary>Dev Tool Testing<strong>(Click dropdown for images)</strong></summary>
 <p align="center">
-  <img height="350" src="README/testing/images/automatic_testing_views.png" style="max-width:100%;"></a>
+  <img height="350" src="README/testing/images/dev_tool_testing.jpg" style="max-width:100%;"></a>
 </p>
 </details>
 
@@ -462,19 +464,26 @@ I carried out manual testing and documented any errors/random side-effects captu
 
 #### HTML Validators
 I tested the code on [W3C HTML VALIDATOR]( https://validator.w3.org/).
-If i directly inputted my code into the validator i would only get errors related to the base templates so these can be ignored.
+If I directly inputted my code into the validator I would only get errors related to the base templates so these can be ignored.
 
-If i inputted the url into the validator i only got a warning related to he type attribute is unnecessary for JavaScript resources ( <script type="text/javascript"></script>)
+If I inputted the url into the validator I only got a warning related to he type attribute is unnecessary for JavaScript resources ( <script type="text/javascript"></script>)
 This can also be ignored as it doesn't affect the code. 
 
 <details>
     <summary>HTML Validator <strong>(Click dropdown for images)</strong></summary>
     <p align="center">
-    <img height="350" src="README/testing/html_validator.png" style="max-width:100%;"></a>
+    <img height="350" src="README/testing/images/html_validator.png" style="max-width:100%;"></a>
     </details> 
 
 #### Pep8
-I carried out [PEP8 testing]( http://pep8online.com/) to improve the readability and consistency of my Python code. Pep8 is installed on my [Gitpod](https://gitpod.io/) workspace, so i check it regularly for errors or warnings. They are usually only minor issue like; like a line being too long or having a trailing whitespace on a line. Sometimes i would use [PEP8 Online Testing]( http://pep8online.com/) as i find it easier to spot the errors on that site. Below is my pass result for pep8 
+I carried out [PEP8 testing]( http://pep8online.com/) to improve the readability and consistency of my Python code. Pep8 is installed on my [Gitpod](https://gitpod.io/) workspace, so I check it regularly for errors or warnings. They are usually only minor issue like; like a line being too long or having a trailing whitespace on a line. Sometimes I would use [PEP8 Online Testing]( http://pep8online.com/) as I find it easier to spot the errors on that site. Below is my pass result for pep8 
+
+There was one error in the Checkout models, with a line being too long. 
+
+def __str__(self):
+        return f'{self.whiskey_club.name} for {self.subscription_type.name} on order {self.order.order_number}'
+
+In my opinion breaking up this line would actually make it read worse so i left it. 
 
 <details>
 <summary>Pep8 errors<strong>(Click dropdown for images)</strong></summary>
@@ -507,13 +516,13 @@ I have showcased screngrabs of how the website pages rendered on desktop/laptop 
 Testing in [Chrome Developer Tools]( https://developers.google.com/web/tools/chrome-devtools) was carried out on an ongoing basis to check the responsiveness and carried out debugging of issues.
 
 #### Homepage (Hero Image)
-I didn't have to change anything on the homepage to make it responsive, as it rendered well on Laptop/desktop tablet and mobile. Generally i implement a media query for smaller screen widths to centre the hero image. 
+I didn't have to change anything on the homepage to make it responsive, as it rendered well on Laptop/desktop tablet and mobile. Generally I implement a media query for smaller screen widths to centre the hero image. 
 The mobile display looks slightly different than the tablet and desktop view as the whiskey bottle is out of view, however I thought the mobile view, looked equally as good and appropriate for my website with only the whiskey glass on the hero image.
 
 <details>
 <summary>Homepage Responsiveness<strong>(Click dropdown for images)</strong></summary>
 <p align="center">
-  <img height="350" src="README/images/hero_image_readme.png" style="max-width:100%;"></a>
+  <img height="350" src="README/images/hero_image_readme.jpg" style="max-width:100%;"></a>
 </p>
 <p align="center">
   <img height="350" src="README/testing/images/hero_image_ipad.png" style="max-width:100%;"></a>
@@ -524,9 +533,9 @@ The mobile display looks slightly different than the tablet and desktop view as 
 </details>
 
 #### Choose Your Poison and Choose Your Hit 
-The Choose your poison and choose your hit pages have the same card deck layout. during development i had a bug issue where the items were't aligning in the card deck. 
+The Choose Your Poison and Choose Your Hit pages have the same card deck layout. during development I had a bug issue where the items were't aligning in the card deck. 
 This is the sort of debugging that was carried out on an ad hoc basis. I would run the project, see it in the browser and make the necessary changes.
-Here i had to add display flex and other changes to the card body. 
+Here I had to add display flex and other changes to the card body. 
 
 <details>
 <summary>Debug<strong>(Click dropdown for images)</strong></summary>
@@ -535,11 +544,11 @@ Here i had to add display flex and other changes to the card body.
 </p>
 </details>
 
-The only responsive changes i had to make for these two pages was a media query for max-width of 768px because up to that width the card decks took up an entire column and there needed to be a margin between the card decks otherwise they would be stacked on top of each other.
-Also at on any width above 768px i made the images within the card deck 20vw (viewport width) so they appeared larger on larger devices. 
+The only responsive changes I had to make for these two pages was a media query for max-width of 768px because up to that width the card decks took up an entire column and there needed to be a margin between the card decks otherwise they would be stacked on top of each other.
+Also at on any width above 768px I made the images within the card deck 20vw (viewport width) so they appeared larger on larger devices. 
 
 <details>
-<summary>Choose Your Hit<strong>(Click dropdown for images)</strong></summary>
+<summary>Choose Your Poison <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
   <img height="350" src="README/images/choose_your_poison.png" style="max-width:100%;"></a>
 </p>
@@ -552,7 +561,7 @@ Also at on any width above 768px i made the images within the card deck 20vw (vi
 </details>
 
 <details>
-<summary>Choose Your Poison<strong>(Click dropdown for images)</strong></summary>
+<summary>Choose Your Hit <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
   <img height="350" src="README/images/choose_your_hit.png" style="max-width:100%;"></a>
 </p>
@@ -566,10 +575,10 @@ Also at on any width above 768px i made the images within the card deck 20vw (vi
 
 ### Whiskey Selected Page
 This page was required the most styling in order for it to be responsive across all screen widths as it was a heavily customized page. 
-As you can see all the content is stacked above each other on lower screen widths and on medium screen widths and above the content and images are place next to each other. 
+As you can see all the content is stacked above each other on lower screen widths.On medium screen widths and above the content and images are place next to each other. 
 
-i have also shown an example of the bug i fixed for the bottom container also. in the first image, the original bug its hard to read the content with the whiskey glass in the background.
-To overcome this i implemented a media query and reduced the height of the image and reduced the top margin on the content. 
+I have also shown an example of the bug I fixed for the bottom container also. in the first image, the original bug, it is hard to read the content with the whiskey glass in the background.
+To overcome this I implemented a media query and reduced the height of the image and reduced the top margin on the content. 
 
 <details>
 <summary>Debug & Fix <strong>(Click dropdown for images)</strong></summary>
@@ -643,22 +652,29 @@ This page stacks on top of each other on smaller screen widths.
   <img height="350" src="README/testing/images/404_ipad.png" style="max-width:100%;"></a>
 </p>
 <p align="center">
-  <img height="350" src="README/testing/images/404_mob.png" style="max-width:100%;"></a>
+  <img height="350" src="README/testing/images/404_mobile.png" style="max-width:100%;"></a>
 </p>
 </details>
 
 ### Shopping Cart / Profile / Order page / Checkout page / Authentication pages
-Since these pages are very much template forms and involve not much of customization i decided to upload a video showcasing the responsiveness of these pages instead of uploading several screengrab's.
+Since these pages are very much template boostrap forms and involve not much customization, I decided to upload a video showcasing the responsiveness of these pages instead of uploading several screengrab's.
 
 <a href="https://www.youtube.com/watch?v=7GutIKUibR8&feature=youtu.be"><img src="README/images/youtube.png" max-width="50%"></a>
 
 **Click the image or the link here [Youtube Video](https://www.youtube.com/watch?v=7GutIKUibR8&feature=youtu.be)**
 
 ## Testing on different browsers and devices
-matrix 
-ie 
-etc 
+**The main points from this type of testing**
+    
+  - The Website was tested on Google Chrome,Internet Explorer, Microsoft Edge, Mozilla Firefox and Safari browsers.
 
+  - The website was viewed on a variety of devices such as Desktop, Large Monitor, Laptop, iPhone7, iPhone 8 & iPhoneX and other samsung devices.
+
+  - A large amount of testing was done to ensure that all pages were linking correctly.
+
+  - Friends and family members were asked to review the site and point out any bugs and/or user experience issues.
+
+  - Yet again, Internet Explorer performed poorly. Buttons are either positioned incorrectly or don’t appear at all. Horizontal rules are also out of position on Internet Explorer.         
 
 ## Testing of User Stories 
 
@@ -671,7 +687,7 @@ etc
 <details>
 <summary>User story 1 <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
-  <img height="350" src="README/testing/images/user_story1.png" style="max-width:100%;"></a>
+  <img height="350" src="README/testing/images/user_story_1.jpg" style="max-width:100%;"></a>
 </p>
 </details>
 
@@ -683,7 +699,7 @@ etc
 <details>
 <summary>User Story 2 <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
-  <img height="350" src="README/testing/images/user_story2.png" style="max-width:100%;"></a>
+  <img height="350" src="README/testing/images/user_story2.jpg" style="max-width:100%;"></a>
 </p>
 </details>
 
@@ -695,21 +711,21 @@ etc
 <details>
 <summary>User Story 3 <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
-  <img height="350" src="README/testing/images/user_story3.png" style="max-width:100%;"></a>
+  <img height="350" src="README/testing/images/user_story3.jpg" style="max-width:100%;"></a>
 </p>
 </details>
 
 ---
 
 
-4. As a user I want to be able to see some sort of 'About page' as i never heard of a whiskey subscription club before. 
+4. As a user I want to be able to see some sort of 'About page' as I never heard of a whiskey subscription club before. 
     * 'How It Works' - this page's main purpose is to reaffirm the service Angel's Share is providing and what a simple process it is. 
     This page uses icons and images to inform the user of the service in a fun imaginative way.
 
 <details>
 <summary>User Story 4 <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
-  <img height="350" src="README/testing/images/user_story4.png" style="max-width:100%;"></a>
+  <img height="350" src="README/testing/images/user_story4.jpg" style="max-width:100%;"></a>
 </p>
 </details>
 
@@ -723,7 +739,7 @@ etc
 <details>
 <summary>User Story 5 <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
-  <img height="350" src="README/testing/images/user_story5.png" style="max-width:100%;"></a>
+  <img height="350" src="README/testing/images/user_story5.jpg" style="max-width:100%;"></a>
 </p>
 </details>
 
@@ -783,7 +799,7 @@ I can Create Subscriptions / Whiskey Clubs
 </p>
 </details>
 
-I can read orders, see subscription, the whiskey club, userprofile, total etc
+I can read orders, see subscriptions, the whiskey club, userprofile, total etc
 <details>
 <summary>User Story 9 **Read** <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
@@ -798,11 +814,11 @@ I can edit objects in the admin.
 <details>
 <summary>User Story 9 **Update** <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
-  <img height="350" src="README/testing/images/edit_admin.jpg" style="max-width:100%;"></a>
+  <img height="350" src="README/testing/images/edit_admin.png" style="max-width:100%;"></a>
 </p>
 </details>
 
-And finally i can delete things like whiskey clubs, subscription plans, orders etc 
+And finally I can delete things like whiskey clubs, subscription plans, orders etc 
 <details>
 <summary>User Story 9 **Delete** <strong>(Click dropdown for images)</strong></summary>
 <p align="center">
@@ -815,7 +831,7 @@ And finally i can delete things like whiskey clubs, subscription plans, orders e
 
 ### Webhooks 
 
-i tested webhooks by checking if they were received on their server. 
+I tested webhooks by checking if they were received on their server. 
 I removed the form.submit(); from the stripe_elements.js in order to replicate the instance of a user entering their card details, then clicking the complete order button, and then a user unknowingly or knowingly redirecting away before the form can be submitted and the user redirected to the checkout success page.
 what would happen in this situation without webhooks would be the consumer would pay for the order but Angel Share wouldn't recieve the order on their side to activate the subscription and deliver the whiskey. 
 
@@ -825,7 +841,7 @@ what would happen in this situation without webhooks would be the consumer would
   <img height="350" src="README/testing/images/stripe_js.png" style="max-width:100%;"></a>
 </p>
 <p align="center">
-  <img height="350" src="README/testing/images/webhook_received.png" style="max-width:100%;"></a>
+  <img height="350" src="README/testing/images/webhook_recieved.png" style="max-width:100%;"></a>
 </p>
 <p align="center">
   <img height="350" src="README/testing/images/order_processed.jpg" style="max-width:100%;"></a>
@@ -833,43 +849,68 @@ what would happen in this situation without webhooks would be the consumer would
 </details>
 
 ### Access Denied
-I also tested accessing pages that require authentication while i am logged out and thankfully all those cases worked.  
+I carried out several testing of trying to access pages a user shouldn't be allowed to. 
+
+Here is a few of the defensive designs I have implemented to my website.:
+
+1. A user can't have two of the of the same Whiskey Clubs in the shopping cart, as I don't want to have a messy situation where users can have two subscriptions to the same club. 
+I also test to see if the user already has an order in our system for that subscription, and if so, prevents them from adding the club to the cart.
+Users are allowed have a subscription to different clubs. So it is possible a user has a subscription plan to all three of the whiskey clubs.
+
+<details>
+<summary>Webhook testing<strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/access_in_cart.png" style="max-width:100%;"></a>
+</p>
+<p align="center">
+  <img height="350" src="README/images/whiskey_in_order.png" style="max-width:100%;"></a>
+</p>
+</details>
+
+2. Authentication is required to add items to the cart, and if users are not logged in they are redirected to the login page with the appropriate message. 
+<details>
+<summary>Webhook testing<strong>(Click dropdown for images)</strong></summary>
+<p align="center">
+  <img height="350" src="README/images/access_auth.png" style="max-width:100%;"></a>
+</p>
+</details>
+
 
 ## SCHEMA 
 <h2 align="center"><img src="README/images/schema.png" max-width="30%"></h2>
-In development i used the relational database [SQLite](https://www.sqlite.org/index.html) which is set up as default in Django. 
+In development I used the relational database SQLite which is set up as default in Django. 
 
-Firstly within my Clubs app i have my two models Whiskey_Clubs and Subscription_type which have a many to many relationship, as a club can have many subscriptions and also a subscription may have many clubs. 
+Firstly within my Clubs app I have my two models Whiskey_Clubs and Subscription_type which have a many to many relationship, as a club can have many subscriptions and also a subscription may have many clubs. 
 The Subscriptions model is the through table which consists of the foreign keys to both the Whiskey_club and Subscription type. 
 
 This relationship allowed me to append these two objects together when after user selected their club and subscription.
 
 for club_id, club_details in cart.items():
 
-{'1':{'sub_id':4', 'quantity':1}} - so this is what gets added to the cart. Whiskey_club.id of 1 , sub_id of 4 and quantity of 1. I realized afterwards, that i could have left out the quantity
-as i always want it to be 1 as it makes no sense for a user to sign up to two of the same subscriptions. 
+{'1':{'sub_id':4', 'quantity':1}} - so this is what gets added to the cart. Whiskey_club.id of 1 , sub_id of 4 and quantity of 1. I realized afterwards, that I could have left out the quantity
+as I always want it to be 1 as it makes no sense for a user to sign up to two of the same subscriptions. 
 
 ---
-OrderModel and UserProfiles are related due to the UserProfile foreignkey within the OrderLineItem. This facilitates us checking the database to see if a user already has a subscription to that specific whiskey club before adding it to the cart. Because of the foreign key relationship it allows us to pre populate the forms 
+OrderModel and UserProfiles are related due to the UserProfile foreign key within the OrderLineItem. This facilitates us checking the database to see if a user already has a subscription to that specific whiskey club before adding it to the cart. Because of the foreign key relationship it allows us to pre populate the forms 
 when the user clicks the save(info) button when checking out or when they click update details in the profile app. 
 
-    * When user clicks update information in the profiles app, this pre populates the delivery details in the order form when the user checks out. 
-    * When the user clicks save info when entering the delivery details in the checkout, this updates the information in the profiles form. 
+* When user clicks update information in the profiles app, this pre populates the delivery details in the order form when the user checks out. 
+* When the user clicks save info when entering the delivery details in the checkout, this updates the information in the profiles form. 
 
 This is how the Angel's Share database is organised and how the relations among them are associated.
 
 ## DEPLOYMENT
-I first set up my repository on Github. Github is a hosting platform which stores and presents my code. When logged into GitHub i click the green button on the right handside under repositories to create a new repository. After creating a repository on github i click the green 'Gitpod' button which opens my repository in Gitpod. I don't ever create projects directly in Gitpod, i create them in Github, and use the green button to open my project and begin coding.
+I first set up my repository on Github. Github is a hosting platform which stores and presents my code. When logged into GitHub I click the green button on the right handside under repositories to create a new repository. After creating a repository on github I click the green 'Gitpod' button which opens my repository in Gitpod. I don't ever create projects directly in Gitpod, I create them in Github, and use the green button to open my project and begin coding.
 
 Gitpod is an IDE (integrated development environment) that allows for software development.
-Once i have inserted some code, i can run my page in the browser and within seconds, i can view the web version of my page. Gitpod is where i develop my project, write code and complete debugging issues.
+Once I have inserted some code, I can run my page in the browser and within seconds, I can view the web version of my page. Gitpod is where I develop my project, write code and complete debugging issues.
 
-An important note, after i have created the repo in Github, I then open the repository each time from the Gitpod homepage, which shows me my most recent workspaces. If I were to click the green button in Github every time, this would just create a new version of my repository each time.
+An important note, after I have created the repo in Github, I then open the repository each time from the Gitpod homepage, which shows me my most recent workspaces. If I were to click the green button in Github every time, this would just create a new version of my repository each time.
 
 In Gitpod, the next step is to commit any significant work and push it to Github.
 
 ### Installing Django 
-Once i had my gitpod workspace set up i then progressed to installing django. I used the [Code Institute Full template]( https://github.com/Code-Institute-Org/gitpod-full-template) 
+Once I had my gitpod workspace set up I then progressed to installing django. I used the [Code Institute Full template]( https://github.com/Code-Institute-Org/gitpod-full-template) 
 so pip, python3 and Git were already installed on my workspace. Below are the steps to get started with Django. 
 
 ** In the terminal** follow the steps below:
@@ -879,17 +920,17 @@ so pip, python3 and Git were already installed on my workspace. Below are the st
 2.       django-admin startproject angels-share .
 
     * The dot at the end just means to set up this django app in the current directory
-    ** where i have 'angels-share' you can enter whatever name you'd like for your django app. 
+    ** where I have 'angels-share' you can enter whatever name you'd like for your django app. 
 
 3.      touch .gitignore
 
-    * In this file i added:  *.sqlite3 (this is to ignore my database file)
+    * In this file I added:  *.sqlite3 (this is to ignore my database file)
     * *.pyc
     * __pycache__ (these two are to ignore any compiled python code)
 
 4.      python3 manage.py runserver 
 
-    * i exposed port 8000 here, and i am prompted with the below page indicating i installed django successfully. 
+    * I exposed port 8000 here, and I am prompted with the below page indicating I installed django successfully. 
 
 <h2 align="center"><img src="README/images/django_install.png" max-width="30%"></h2>
 
@@ -905,19 +946,19 @@ so pip, python3 and Git were already installed on my workspace. Below are the st
 
     * enter your username, email and password. 
 
-From here i was able to get started on my project, install apps, create my views, models, urls etc. 
+From here I was able to get started on my project, install apps, create my views, models, urls etc. 
 
-This project it is hosted on [Heroku]( https://signup.heroku.com/?c=70130000000NeLCAA0&gclid=Cj0KCQjwjer4BRCZARIsABK4QeUrUsqWM9q6V3aC9FczWoV80QkJn_rR-MNe3GDdz7XdQsVdGUbv3X8aAufJEALw_wcB) and i have outlined below how to deploy your project on Heroku.
+This project it is hosted on [Heroku]( https://signup.heroku.com/?c=70130000000NeLCAA0&gclid=Cj0KCQjwjer4BRCZARIsABK4QeUrUsqWM9q6V3aC9FczWoV80QkJn_rR-MNe3GDdz7XdQsVdGUbv3X8aAufJEALw_wcB) and I have outlined below how to deploy your project on Heroku.
 
 ### Heroku Deployment 
-To deploy a Django project to heroku, follow the steps i took below:
+To deploy a Django project to heroku, follow the steps I took below:
 
 1. Create a new app on the [Heroku Website]( https://signup.heroku.com/?c=70130000000NeLCAA0&gclid=Cj0KCQjwjer4BRCZARIsABK4QeUrUsqWM9q6V3aC9FczWoV80QkJn_rR-MNe3GDdz7XdQsVdGUbv3X8aAufJEALw_wcB)
 Give it a name and set the region to whichever is applicable for your location.
 
 2. I used a [Postgres](https://www.postgresql.org/) database for my django app when hosted on heroku. 
-In heroku i clicked the **Resources** tab and searched for Postgres in the addons.
-Once added i clicked the **Settings** tab and within the **config vars** section i can access my Postgres Url. 
+In heroku I clicked the **Resources** tab and searched for Postgres in the addons.
+Once added I clicked the **Settings** tab and within the **config vars** section I can access my Postgres Url. 
 
 3. Over in the Gitpod workspace terminal install dj_database_url, and psycopg2. 
 
@@ -955,11 +996,11 @@ Once added i clicked the **Settings** tab and within the **config vars** section
 
 11. Confirm the linking of the heroku app to the correct GitHub repository.
 
-12. I set up [Amazon Webservers](https://aws.amazon.com/) to host my media and static files. (S3)[https://aws.amazon.com/s3/) Simple Storage Service is the service app i used to store my static files like JavaScript and CSS and my images. 
+12. I set up [Amazon Webservers](https://aws.amazon.com/) to host my media and static files. (S3)[https://aws.amazon.com/s3/) Simple Storage Service is the service app I used to store my static files like JavaScript and CSS and my images. 
 
     * [Here] is a link on how to set up an S3 bucket. 
 
-13. Within my config vars in heroku i made sure it had my AWS Access keys, Secret keys, stripes keys etc. 
+13. Within my config vars in heroku I made sure it had my AWS Access keys, Secret keys, stripes keys etc. 
 
 <h2 align="center"><img src="README/images/config_vars.png" max-width="30%"></h2>
 
@@ -1035,7 +1076,7 @@ To deploy Angel's Share to heroku, take the following steps:
 
 7. Set the following config vars:
 
-<h2 align="center"><img src="README/images/config_local.png" max-width="30%"></h2>
+<h2 align="center"><img src="README/images/config_vars2.jpg" max-width="30%"></h2>
 
 8.  Once instances of these items exist in your database your heroku site will run as expected.
 
@@ -1050,3 +1091,10 @@ To deploy Angel's Share to heroku, take the following steps:
 - Some of the content about Irish Whiskey was inspired or copied directly from this article post titled [An introduction to Irish Whiskey](https://www.primermagazine.com/2013/live/an-introduction-to-irish-whiskey#:~:text=Smooth%20and%20sweet%2C%20the%20nose,over%20heavily%20into%20the%20taste.&text=The%20whiskey%20finishes%20long%2C%20warm%2C%20and%20spicy.) from [Primer Magazine](https://www.primermagazine.com/)
 - The content about American Whiskey was inspired or copied directly from this article titled [American Whiskey]( https://www.whisky.com/information/knowledge/production/types-of-whiskies/american-whiskey.html) from [Whisky.com]( https://www.whisky.com/)
 - The content about Scottish Whisky was inspired or copied directly from this post titled [The Scotch Whisky Guide]( https://www.gentlemansgazette.com/the-scotch-whisky-guide/) from the [Gentleman's Gazette]( https://www.gentlemansgazette.com/).
+
+## ACKNOWLEDGEMENTS
+- My mentor, [Precious Ijege]( https://github.com/precious-ijege) was a great help. The three mentor sessions were invaluable. He explained every suggestion in a clear concise manner, and pointed out bugs i would never have seen.
+
+- My tutor, [Cormac Lawlor]( https://github.com/armedcor) was very supportive during the project. Being a past student himself, he was aware of certain issues i was facing and was always at hand to offer support. 
+
+- [Chris Zielinski]( https://github.com/ckz8780) - Chris developed a brilliant project boutique ado in the code institute course module for django. The project was so extensive i was able to reuse some of the apps in this project by adding my own customization. 
