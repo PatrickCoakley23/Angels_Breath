@@ -839,7 +839,7 @@ what would happen in this situation without webhooks would be the consumer would
 I also tested accessing pages that require authentication while i am logged out and thankfully all those cases worked.  
 
 ## SCHEMA 
-<h2 align="center"><img src="README/images/schema.jpg" max-width="30%"></h2>
+<h2 align="center"><img src="README/images/schema.png" max-width="30%"></h2>
 In development i used the relational database [SQLite](https://www.sqlite.org/index.html) which is set up as default in Django. 
 
 Firstly within my Clubs app i have my two models Whiskey_Clubs and Subscription_type which have a many to many relationship, as a club can have many subscriptions and also a subscription may have many clubs. 
@@ -860,6 +860,187 @@ when the user clicks the save(info) button when checking out or when they click 
     * When the user clicks save info when entering the delivery details in the checkout, this updates the information in the profiles form. 
 
 This is how the Angel's Share database is organised and how the relations among them are associated.
+
+## DEPLOYMENT
+I first set up my repository on Github. Github is a hosting platform which stores and presents my code. When logged into GitHub i click the green button on the right handside under repositories to create a new repository. After creating a repository on github i click the green 'Gitpod' button which opens my repository in Gitpod. I don't ever create projects directly in Gitpod, i create them in Github, and use the green button to open my project and begin coding.
+
+Gitpod is an IDE (integrated development environment) that allows for software development.
+Once i have inserted some code, i can run my page in the browser and within seconds, i can view the web version of my page. Gitpod is where i develop my project, write code and complete debugging issues.
+
+An important note, after i have created the repo in Github, I then open the repository each time from the Gitpod homepage, which shows me my most recent workspaces. If I were to click the green button in Github every time, this would just create a new version of my repository each time.
+
+In Gitpod, the next step is to commit any significant work and push it to Github.
+
+### Installing Django 
+Once i had my gitpod workspace set up i then progressed to installing django. I used the [Code Institute Full template]( https://github.com/Code-Institute-Org/gitpod-full-template) 
+so pip, python3 and Git were already installed on my workspace. Below are the steps to get started with Django. 
+
+** In the terminal** follow the steps below:
+
+1.       pip3 install django
+
+2.       django-admin startproject angels-share .
+
+    * The dot at the end just means to set up this django app in the current directory
+    ** where i have 'angels-share' you can enter whatever name you'd like for your django app. 
+
+3.      touch .gitignore
+
+    * In this file i added:  *.sqlite3 (this is to ignore my database file)
+    * *.pyc
+    * __pycache__ (these two are to ignore any compiled python code)
+
+4.      python3 manage.py runserver 
+
+    * i exposed port 8000 here, and i am prompted with the below page indicating i installed django successfully. 
+
+<h2 align="center"><img src="README/images/django_install.png" max-width="30%"></h2>
+
+5. * Then stop the server and go back to the terminal 
+
+        python3 manage.py migrate
+
+    *this is to make the inital migrations. 
+
+6. * We can then create a superuser
+
+        python3 manage.py createsuperuser
+
+    * enter your username, email and password. 
+
+From here i was able to get started on my project, install apps, create my views, models, urls etc. 
+
+This project it is hosted on [Heroku]( https://signup.heroku.com/?c=70130000000NeLCAA0&gclid=Cj0KCQjwjer4BRCZARIsABK4QeUrUsqWM9q6V3aC9FczWoV80QkJn_rR-MNe3GDdz7XdQsVdGUbv3X8aAufJEALw_wcB) and i have outlined below how to deploy your project on Heroku.
+
+### Heroku Deployment 
+To deploy a Django project to heroku, follow the steps i took below:
+
+1. Create a new app on the [Heroku Website]( https://signup.heroku.com/?c=70130000000NeLCAA0&gclid=Cj0KCQjwjer4BRCZARIsABK4QeUrUsqWM9q6V3aC9FczWoV80QkJn_rR-MNe3GDdz7XdQsVdGUbv3X8aAufJEALw_wcB)
+Give it a name and set the region to whichever is applicable for your location.
+
+2. I used a [Postgres](https://www.postgresql.org/) database for my django app when hosted on heroku. 
+In heroku i clicked the **Resources** tab and searched for Postgres in the addons.
+Once added i clicked the **Settings** tab and within the **config vars** section i can access my Postgres Url. 
+
+3. Over in the Gitpod workspace terminal install dj_database_url, and psycopg2. 
+
+        pip3 install dj_database_url
+
+        pip3 install psycopg2-binary
+
+4. Create a `requirements.txt` file using the terminal command `pip freeze > requirements.txt`
+
+    * to update the requirements folder after further downloads type the same command. 
+
+5. I then import dj_database_url to my settings.py file and changed my database to
+
+    DATABASES = {
+        'default': dj_database_url.parse('<enter postgres url here as mentioned in step 2>'))
+    }
+
+6. Migrate changes to Postgres. 
+
+                python3 manage.py migrate
+
+    ** can then create a superuser again for the postgres admin
+
+7. Intall gunicorn to act as webserver 
+
+        pip3 install unicorn 
+
+    * then freeze requirements
+
+8. Create a `Procfile` with the terminal command `echo web: python app.py > Procfile`.
+
+9. `git add` and `git commit` the new requirements and Procfile and then `git push` the project to GitHub.
+
+10. From the heroku dashboard of your newly created application, click on "Deploy" > "Deployment method" and select GitHub.
+
+11. Confirm the linking of the heroku app to the correct GitHub repository.
+
+12. I set up [Amazon Webservers](https://aws.amazon.com/) to host my media and static files. (S3)[https://aws.amazon.com/s3/) Simple Storage Service is the service app i used to store my static files like JavaScript and CSS and my images. 
+
+    * [Here] is a link on how to set up an S3 bucket. 
+
+13. Within my config vars in heroku i made sure it had my AWS Access keys, Secret keys, stripes keys etc. 
+
+<h2 align="center"><img src="README/images/config_vars.png" max-width="30%"></h2>
+
+### How to run this project locally
+To run this project on your own IDE follow the instructions below. Ensure you have an IDE such as GitPod and the following installed:
+
+1. PIP
+2. Git
+3. Python3
+4. If you are using the [Code Institute Full template]( https://github.com/Code-Institute-Org/gitpod-full-template) the above will already be installed
+
+6. To allow you to access all functionality on the site locally, ensure you have created free accounts with the following services:
+    - [Stripe](https://dashboard.stripe.com/register)
+    - [AWS](https://aws.amazon.com/) and [set up an S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)
+    - Set up SMTP server with a [Gmail](https://mail.google.com/) account for automatic emails. Steps to download [here]( https://www.siteground.com/kb/google_free_smtp_server/) 
+
+#### Instructions
+1. Save a copy of the github repository located at https://github.com/PatrickCoakley23/Angels_Share
+
+    * Click on the "Clone or download" green button located above and to the right of the File Structure table.
+    *Click on the "clipboard icon" to the right of the Git URL to copy the web URL of the Clone.
+
+2.        git clone https://github.com/PatrickCoakley23/Angels_Share
+
+        * enter the Git url you copied in step one. 
+
+3.  In the settings.py file set your AWS Bucket name and allowed hosts.
+
+4. Locate your settings file for storing enivonment variables. If using Gitpod it is located in the settings dropdown from https://gitpod.io/workspaces/. 
+Do not forget to restart your machine to activate your environment variables or your code will not be able to see them:
+
+Set the variables to match the names in Angels_Share Workspace. 
+
+        {
+    
+    "DEV": "1",
+    "M4SECRET_KEY": "<enter key here>",
+    "STRIPE_PUBLIC_KEY": "<enter key here>",
+    "STRIPE_SECRET_KEY": "<enter key here>",
+    "M4SECRET_KEY": "<enter key here>",
+}
+
+5. Migrate the admin panel models to create your database template with the terminal command
+
+         python3 manage.py migrate
+
+    *this is to make the inital migrations. 
+
+6. * We can then create a superuser
+
+        python3 manage.py createsuperuser
+
+    * enter your username, email and password. 
+
+
+#### Heroku Deployment 
+
+To deploy Angel's Share to heroku, take the following steps:
+
+1. Create a `requirements.txt` file using the terminal command `pip freeze > requirements.txt`.
+
+2. Create a `Procfile` with the terminal command `echo web: python app.py > Procfile`.
+
+3. `git add` and `git commit` the new requirements and Procfile and then `git push` the project to GitHub.
+
+3. Create a new app on the [Heroku website](https://dashboard.heroku.com/apps) by clicking the "New" button in your dashboard. Give it a name and set the region to whichever is applicable for your location.
+
+4. From the heroku dashboard of your newly created application, click on "Deploy" > "Deployment method" and select GitHub.
+
+5. Confirm the linking of the heroku app to the correct GitHub repository.
+
+6. In the heroku dashboard for the application, click on "Settings" > "Reveal Config Vars".
+
+7. Set the following config vars:
+
+<h2 align="center"><img src="README/images/config_local.png" max-width="30%"></h2>
+
+8.  Once instances of these items exist in your database your heroku site will run as expected.
 
 ## Credits
 
