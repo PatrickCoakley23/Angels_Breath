@@ -475,6 +475,19 @@ I carried out manual testing and documented any errors/random side-effects captu
 
 ### Validators
 
+#### HTML Validators
+I tested the code on [W3C HTML VALIDATOR]( https://validator.w3.org/).
+If i directly inputted my code into the validator i would only get errors related to the base templates so these can be ignored.
+
+If i inputted the url into the validator i only got a warning related to he type attribute is unnecessary for JavaScript resources ( <script type="text/javascript"></script>)
+This can also be ignored as it doesn't affect the code. 
+
+<details>
+    <summary>HTML Validator <strong>(Click dropdown for images)</strong></summary>
+    <p align="center">
+    <img height="350" src="README/testing/html_validator.png" style="max-width:100%;"></a>
+    </details> 
+
 #### Pep8
 I carried out [PEP8 testing]( http://pep8online.com/) to improve the readability and consistency of my Python code. Pep8 is installed on my [Gitpod](https://gitpod.io/) workspace, so i check it regularly for errors or warnings. They are usually only minor issue like; like a line being too long or having a trailing whitespace on a line. Sometimes i would use [PEP8 Online Testing]( http://pep8online.com/) as i find it easier to spot the errors on that site. Below is my pass result for pep8 
 
@@ -811,7 +824,6 @@ And finally i can delete things like whiskey clubs, subscription plans, orders e
   <img height="350" src="README/testing/images/delete_admin.jpg" style="max-width:100%;"></a>
 </p>
 </details>
-
 
 
 ## Further Testing 
