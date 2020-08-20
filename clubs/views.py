@@ -1,6 +1,5 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Whiskey_club, Subscription_type
-from django.contrib.auth.decorators import login_required
 
 
 def whiskey_clubs(request):
@@ -9,7 +8,7 @@ def whiskey_clubs(request):
     """
 
     whiskey_clubs = Whiskey_club.objects.all()
-    
+
     context = {
         'whiskey_clubs': whiskey_clubs,
     }

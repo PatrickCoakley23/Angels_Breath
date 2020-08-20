@@ -1,26 +1,32 @@
 from django.shortcuts import get_object_or_404
-from clubs.models import Subscription_type, Whiskey_club, Subscriptions
+from clubs.models import Subscription_type, Whiskey_club
+
+"""
+Making use of Contexts processor so the cart items
+defined below are made available across the entire
+website
+"""
 
 
-# Cart items defined so they can be accessed across the site
 def cart_contents(request):
     cart = request.session.get('cart', {})
     cart_items = []
     total = 0
     delivery = 0
-    
+
     """
-    for sub_id, sub_details in cart.items():
-        subscription = get_object_or_404(Subscription_type, pk=sub_id)
-        club = get_object_or_404(Whiskey_club, pk=sub_details['club_id'])
-        all_subs = Subscription_type.objects.all()
+    This is how the clubs are added to the cart.
+    for club_id, club_details in cart.items():
+    {'1':{'sub_id':4', 'quantity':1}}
     """
 
     for club_id, club_details in cart.items():
         club = get_object_or_404(Whiskey_club, pk=club_id)
-        subscription = get_object_or_404(Subscription_type, pk=club_details['sub_id'])
+        subscription = get_object_or_404(
+                        Subscription_type, pk=club_details['sub_id']
+                        )
         all_subs = Subscription_type.objects.all()
-      
+
         total += club_details['quantity'] * subscription.price
         cart_items.append(
             {
@@ -38,6 +44,6 @@ def cart_contents(request):
         'cart_items': cart_items,
         'total': total,
         'delivery': delivery,
-        'grand_total': grand_total,  
+        'grand_total': grand_total,
     }
     return context

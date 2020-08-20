@@ -1,7 +1,11 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (
+    render, redirect,
+    reverse, get_object_or_404,
+    HttpResponse
+)
 from django.views.decorators.http import require_POST
-from django.contrib import messages
 from django.conf import settings
+from django.contrib import messages
 
 from .forms import OrderForm
 from clubs.models import Whiskey_club, Subscription_type
@@ -10,10 +14,11 @@ from shopping_cart.contexts import cart_contents
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 
-
-
 import stripe
 import json
+
+# Before we confirm the card payment method in stripe JS we post this view
+
 
 @require_POST
 def cache_checkout_data(request):
@@ -27,12 +32,19 @@ def cache_checkout_data(request):
         })
         return HttpResponse(status=200)
     except Exception as e:
-        messages.error(request, 'Sorry, your payment cannot be \
-            processed right now. Please try again later.')
+        messages.error(request, 'Sorry, your payment cannot be '
+                                'processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
 
 
 def checkout(request):
+    """ This View checks a number of things:
+    1. If the users shipping details are valid
+    2. if card details are valid with stripe webhooks
+    3. if payment is okay create OrderLineItem with club, sub and user details
+    4. if userprofile is valid will try to pre populate the shipping details
+    """
+
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -58,10 +70,12 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_cart = json.dumps(cart)
             order.save()
-          
 
             for club_id, club_details in cart.items():
-                subscription_type = get_object_or_404(Subscription_type, pk=club_details['sub_id'])
+                subscription_type = get_object_or_404(
+                                    Subscription_type,
+                                    pk=club_details['sub_id']
+                                    )
                 whiskey_club = get_object_or_404(Whiskey_club, id=club_id)
                 order_line_item = OrderLineItem(
                         order=order,
@@ -71,9 +85,10 @@ def checkout(request):
                         user_profile=request.user.userprofile
                 )
                 order_line_item.save()
-            
+
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('checkout_success',
+                                    args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
@@ -81,12 +96,13 @@ def checkout(request):
     else:
         cart = request.session.get('cart', {})
         if not cart:
-            messages.error(request, "There's nothing in your cart at the moment")
+            messages.error(request, "There's nothing in "
+                                    "your cart at the moment")
             return redirect(reverse('clubs'))
 
         current_cart = cart_contents(request)
         total = current_cart['grand_total']
-        stripe_total = round(total * 100 )
+        stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(
             amount=stripe_total,
@@ -112,7 +128,8 @@ def checkout(request):
             order_form = OrderForm()
 
     if not stripe_public_key:
-        messages.warning(request, 'stripe public key is missing. Did you forget to set it in your environment')
+        messages.warning(request, 'stripe public key is missing. Did you '
+                                  'forget to set it in your environment')
 
     template = 'checkout/checkout.html'
     context = {
@@ -123,9 +140,11 @@ def checkout(request):
 
     return render(request, template, context)
 
+
 def checkout_success(request, order_number):
     """
-    Handle successful checkouts
+    Handle successful checkouts. If user saved shipping details will
+    update it in profiles page.
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
@@ -153,8 +172,7 @@ def checkout_success(request, order_number):
 
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email}.') 
-
+        email will be sent to {order.email}.')
 
     if 'cart' in request.session:
         del request.session['cart']

@@ -839,7 +839,7 @@ what would happen in this situation without webhooks would be the consumer would
 I also tested accessing pages that require authentication while i am logged out and thankfully all those cases worked.  
 
 ## SCHEMA 
-<h2 align="center"><img src="README/images/logo_white_background.jpg" max-width="30%"></h2>
+<h2 align="center"><img src="README/images/schema.jpg" max-width="30%"></h2>
 In development i used the relational database [SQLite](https://www.sqlite.org/index.html) which is set up as default in Django. 
 
 Firstly within my Clubs app i have my two models Whiskey_Clubs and Subscription_type which have a many to many relationship, as a club can have many subscriptions and also a subscription may have many clubs. 
