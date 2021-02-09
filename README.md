@@ -425,7 +425,7 @@ A long with the benefit of increasing the number of signups, social authenticati
 
 ## TESTING 
  Test driven development involves designing and developing tests for every small functionality of an application.n simple terms, test cases are created before code is written. The purpose of TDD is to make the code clearer, simple and bug-free.
- Although test driven development was necessary for this project, I did implement so tests Order form and on my Whiskey_club view. 
+ Although test driven development wasn't necessary for this project, I did implement so tests Order form and on my Whiskey_club view. 
 
 ### Testing OrderForm
 
