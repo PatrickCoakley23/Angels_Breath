@@ -425,7 +425,7 @@ A long with the benefit of increasing the number of signups, social authenticati
 
 ## TESTING 
  Test driven development involves designing and developing tests for every small functionality of an application.n simple terms, test cases are created before code is written. The purpose of TDD is to make the code clearer, simple and bug-free.
- Although test driven development wasn't necessary for this project, I did implement so tests Order form and on my Whiskey_club view. 
+ Although test driven development wasn't necessary for this project, I did implement some tests on the Order form and on my Whiskey_club view. 
 
 ### Testing OrderForm
 
@@ -452,7 +452,7 @@ A long with the benefit of increasing the number of signups, social authenticati
 </details>
 
 ## Manual Testing 
-Manual testing was the main form of testing I did to access the functionality, usability and responsiveness and data management of my full stack web application. Debugging was carried out on an ongoing basis throughout the development of the project. Whilst coding I would run my code in the browser and check for any bug issues and make changes and fixes on an ad hoc basis. Some of the debugging I carred out, is mentioned in the responsiveness sub section below.
+Manual testing was the main form of testing I undertook to access the functionality, usability and responsiveness and data management of my full stack web application. Debugging was carried out on an ongoing basis throughout the development of the project. Whilst coding I would run my code in the browser and check for any bug issues and make changes and fixes on an ad hoc basis. Some of the debugging I carred out, is mentioned in the responsiveness sub section below.
 
 I carried out manual testing and documented any errors/random side-effects captured in the Chrome Developer Tools. I loaded the website several times, and forced browser refresh to try and catch any errors but thankfully there was none.
 <details>
